@@ -5,61 +5,64 @@ import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { 
-  Zap, 
-  Droplet, 
+  Battery, 
+  Droplets, 
   Filter, 
   Shield, 
   CircleDot, 
-  Wrench,
+  Settings,
   Phone,
   ArrowRight,
   CheckCircle,
   Building,
   Truck,
   Factory,
-  Pickaxe,
-  Wheat,
-  Zap as Energy,
-  Settings,
-  HardHat
+  HardHat,
+  Zap
 } from 'lucide-react';
 
 const Index = () => {
   const productCategories = [
     {
-      icon: Zap,
+      icon: Battery,
       title: "Baterias",
-      description: "Baterias automotivas e industriais de alta qualidade",
+      description: "Baterias automotivas e industriais de alta performance",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
       link: "/produtos#baterias"
     },
     {
-      icon: Droplet,
+      icon: Droplets,
       title: "Lubrificantes",
-      description: "Óleos e lubrificantes para máquinas e motores",
+      description: "Óleos e lubrificantes premium para equipamentos industriais",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
       link: "/produtos#lubrificantes"
     },
     {
       icon: Filter,
       title: "Filtros",
-      description: "Filtros industriais para todos os tipos de equipamentos",
+      description: "Filtros industriais para máquinas e equipamentos",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
       link: "/produtos#filtros"
     },
     {
       icon: Shield,
       title: "EPI",
       description: "Equipamentos de proteção individual certificados",
+      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop",
       link: "/produtos#epi"
     },
     {
       icon: CircleDot,
       title: "Pneus",
-      description: "Pneus para veículos ligeiros e pesados",
+      description: "Pneus para veículos ligeiros e equipamentos pesados",
+      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop",
       link: "/produtos#pneus"
     },
     {
-      icon: Wrench,
+      icon: Settings,
       title: "Equipamentos",
-      description: "Máquinas e ferramentas industriais",
+      description: "Máquinas e ferramentas industriais especializadas",
+      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=600&h=400&fit=crop",
       link: "/produtos#equipamentos"
     }
   ];
@@ -68,45 +71,43 @@ const Index = () => {
     {
       icon: CheckCircle,
       title: "Qualidade Garantida",
-      description: "Produtos de marcas reconhecidas mundialmente"
+      description: "Produtos de marcas reconhecidas mundialmente com certificação de qualidade"
     },
     {
       icon: Truck,
-      title: "Entrega Rápida",
-      description: "Logística eficiente em todo o território angolano"
+      title: "Logística Eficiente",
+      description: "Entrega rápida e segura em todo o território angolano"
     },
     {
       icon: Factory,
-      title: "Experiência Industrial",
-      description: "Mais de 8 anos no mercado angolano"
+      title: "Experiência Comprovada",
+      description: "Mais de 8 anos de expertise no mercado industrial angolano"
     },
     {
       icon: Building,
       title: "Soluções Completas",
-      description: "Desde pequenas peças até equipamentos complexos"
+      description: "Desde componentes individuais até projetos industriais completos"
     }
   ];
 
   const industries = [
     { name: "Construção Civil", icon: HardHat },
-    { name: "Mineração", icon: Pickaxe },
-    { name: "Indústria Alimentar", icon: Factory }, 
+    { name: "Mineração", icon: Building }, 
+    { name: "Indústria Alimentar", icon: Factory },
     { name: "Logística", icon: Truck },
-    { name: "Agricultura", icon: Wheat },
-    { name: "Energia", icon: Energy },
-    { name: "Manufatura", icon: Settings },
-    { name: "Transportes", icon: Building }
+    { name: "Energia", icon: Zap },
+    { name: "Manufatura", icon: Settings }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-industrial-blue via-industrial-blue-light to-industrial-gray-dark text-white py-20 lg:py-32">
-        <div className="absolute inset-0 bg-black/20"></div>
+      {/* Hero Section - Minimalist */}
+      <section className="relative bg-gradient-to-r from-industrial-blue to-industrial-blue-light text-white py-24 lg:py-32">
+        <div className="absolute inset-0 bg-black/10"></div>
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&h=1080&fit=crop")'
           }}
@@ -114,36 +115,36 @@ const Index = () => {
         
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="font-montserrat font-bold text-4xl lg:text-6xl mb-6 leading-tight">
+            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 leading-tight">
               MACHADO & MANSOUR
             </h1>
-            <h2 className="font-montserrat font-semibold text-2xl lg:text-3xl mb-6 text-industrial-orange">
-              O Seu Parceiro Industrial de Confiança em Angola
+            <h2 className="font-montserrat font-medium text-2xl lg:text-3xl mb-6 opacity-90">
+              Soluções Industriais de Alta Performance
             </h2>
-            <p className="font-roboto text-lg lg:text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Fornecemos produtos e equipamentos de alta qualidade para impulsionar a sua operação. 
-              Desde 2016, somos referência em soluções industriais completas.
+            <p className="font-inter text-lg lg:text-xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              Equipamentos, peças e consumíveis de qualidade para otimizar sua operação. 
+              Desde 2016, somos referência em produtos industriais em Angola.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold text-lg px-8 py-4 transition-all duration-200"
+                className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-semibold text-lg px-8 py-4 transition-all duration-200"
                 asChild
               >
                 <Link to="/produtos">
-                  Explore Nossos Produtos
+                  Conheça Nossos Produtos
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue hover:border-white font-roboto font-semibold text-lg px-8 py-4 transition-all duration-200"
+                className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue font-inter font-semibold text-lg px-8 py-4 transition-all duration-200"
                 asChild
               >
                 <Link to="/contacto">
                   <Phone className="mr-2 h-5 w-5" />
-                  Fale Conosco
+                  Fale com um Especialista
                 </Link>
               </Button>
             </div>
@@ -151,34 +152,39 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Product Categories */}
-      <section className="py-16 lg:py-24 bg-industrial-background">
+      {/* Product Categories - Clean grid */}
+      <section className="py-20 lg:py-24 bg-industrial-gray-lighter">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
-              Nossas Categorias de Produtos
+              Nossas Soluções para Sua Indústria
             </h2>
-            <p className="font-roboto text-lg text-gray-600 max-w-2xl mx-auto">
-              Oferecemos uma vasta gama de produtos industriais para atender todas as suas necessidades operacionais
+            <p className="font-inter text-lg text-industrial-gray max-w-2xl mx-auto">
+              Oferecemos uma ampla gama de produtos industriais selecionados para atender 
+              todas as suas necessidades operacionais
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productCategories.map((category, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-industrial-orange group-hover:text-white transition-all duration-300">
-                    <category.icon className="h-8 w-8 text-industrial-blue group-hover:text-white transition-colors duration-300" />
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 cursor-pointer border border-industrial-border bg-white">
+                <CardContent className="p-6">
+                  <div className="relative h-48 mb-6 overflow-hidden rounded-lg">
+                    <img 
+                      src={category.image} 
+                      alt={category.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <h3 className="font-montserrat font-semibold text-xl text-industrial-blue mb-3">
                     {category.title}
                   </h3>
-                  <p className="font-roboto text-gray-600 mb-4">
+                  <p className="font-inter text-industrial-gray mb-4 leading-relaxed">
                     {category.description}
                   </p>
                   <Link 
                     to={category.link}
-                    className="text-industrial-orange hover:text-industrial-orange-dark font-roboto font-medium inline-flex items-center transition-colors duration-200"
+                    className="text-industrial-accent hover:text-industrial-accent/80 font-inter font-medium inline-flex items-center transition-colors duration-200"
                   >
                     Saiba Mais
                     <ArrowRight className="ml-1 h-4 w-4" />
@@ -190,28 +196,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 lg:py-24">
+      {/* Why Choose Us - Minimal */}
+      <section className="py-20 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
-              Porquê Escolher-nos?
+              Compromisso com a Sua Eficiência
             </h2>
-            <p className="font-roboto text-lg text-gray-600 max-w-2xl mx-auto">
-              Somos muito mais que um fornecedor. Somos o seu parceiro estratégico para o sucesso
+            <p className="font-inter text-lg text-industrial-gray max-w-2xl mx-auto">
+              Somos o seu parceiro estratégico para o sucesso, oferecendo qualidade 
+              e confiabilidade em cada produto
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-industrial-orange transition-all duration-300">
-                  <benefit.icon className="h-10 w-10 text-industrial-blue group-hover:text-white transition-colors duration-300" />
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <benefit.icon className="h-8 w-8 text-industrial-accent" />
                 </div>
                 <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
                   {benefit.title}
                 </h3>
-                <p className="font-roboto text-gray-600">
+                <p className="font-inter text-industrial-gray leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -220,26 +227,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Industries Served */}
-      <section className="py-16 lg:py-24 bg-industrial-background">
+      {/* Industries Served - Clean list */}
+      <section className="py-20 lg:py-24 bg-industrial-gray-lighter">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
-              Setores que Servimos
+              Atendendo Diversos Setores em Angola
             </h2>
-            <p className="font-roboto text-lg text-gray-600 max-w-2xl mx-auto">
-              As nossas soluções atendem uma ampla variedade de indústrias em Angola
+            <p className="font-inter text-lg text-industrial-gray max-w-2xl mx-auto">
+              Nossas soluções atendem uma ampla variedade de indústrias em todo território angolano
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {industries.map((industry, index) => (
               <div 
                 key={index} 
-                className="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
+                className="bg-white p-6 rounded-lg text-center shadow-sm hover:shadow-md transition-shadow duration-300 border border-industrial-border"
               >
-                <industry.icon className="h-8 w-8 text-industrial-orange mx-auto mb-3" />
-                <p className="font-roboto font-medium text-industrial-blue">
+                <industry.icon className="h-6 w-6 text-industrial-accent mx-auto mb-3" />
+                <p className="font-inter font-medium text-industrial-text">
                   {industry.name}
                 </p>
               </div>
@@ -248,25 +255,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Preview */}
-      <section className="py-16 lg:py-24">
+      {/* About Preview - Clean */}
+      <section className="py-20 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-6">
                 Sobre a MACHADO & MANSOUR
               </h2>
-              <p className="font-roboto text-lg text-gray-600 mb-6">
-                Fundada em 2016 em Luanda, a MACHADO & MANSOUR estabeleceu-se como uma referência 
+              <p className="font-inter text-lg text-industrial-gray mb-6 leading-relaxed">
+                Fundada em 2016 em Luanda, a MACHADO & MANSOUR estabeleceu-se como referência 
                 no fornecimento de produtos industriais de qualidade em Angola. Especializamo-nos 
-                na distribuição de uma vasta gama de produtos para diversos setores.
+                na distribuição de soluções completas para diversos setores.
               </p>
-              <p className="font-roboto text-lg text-gray-600 mb-8">
+              <p className="font-inter text-lg text-industrial-gray mb-8 leading-relaxed">
                 O nosso compromisso com a qualidade, profissionalismo e transparência fez-nos 
                 crescer e tornar num parceiro de confiança para empresas em todo o país.
               </p>
               <Button 
-                className="bg-industrial-blue hover:bg-industrial-blue-light text-white font-roboto font-semibold transition-colors duration-200"
+                className="bg-industrial-blue hover:bg-industrial-blue-light text-white font-inter font-semibold transition-colors duration-200"
                 asChild
               >
                 <Link to="/sobre">
@@ -278,29 +285,28 @@ const Index = () => {
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop" 
-                alt="Equipa MACHADO & MANSOUR"
+                alt="MACHADO & MANSOUR - Soluções Industriais"
                 className="rounded-lg shadow-xl w-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-industrial-blue/20 to-transparent rounded-lg"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-industrial-blue text-white">
+      {/* CTA Section - Minimal */}
+      <section className="py-20 lg:py-24 bg-industrial-blue text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-montserrat font-bold text-3xl lg:text-4xl mb-6">
             Pronto para Encontrar a Solução Ideal?
           </h2>
-          <p className="font-roboto text-lg mb-8 max-w-2xl mx-auto">
-            A nossa equipa de especialistas está pronta para ajudá-lo a encontrar 
+          <p className="font-inter text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+            Nossa equipa de especialistas está pronta para ajudá-lo a encontrar 
             os produtos certos para o seu negócio. Contacte-nos hoje mesmo!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
+              className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-semibold transition-colors duration-200"
               asChild
             >
               <Link to="/contacto">
@@ -311,7 +317,7 @@ const Index = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue hover:border-white font-roboto font-semibold transition-all duration-200"
+              className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue font-inter font-semibold transition-all duration-200"
               asChild
             >
               <a href="tel:+244946005595">

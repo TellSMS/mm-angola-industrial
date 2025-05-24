@@ -20,39 +20,39 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top contact bar */}
-      <div className="bg-industrial-blue text-white py-2 px-4">
+    <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-industrial-border">
+      {/* Top contact bar - more minimal */}
+      <div className="bg-industrial-blue text-white py-1.5 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4" />
-              <span>+244 946 005 595</span>
+              <Phone className="h-3 w-3" />
+              <span className="font-inter">+244 946 005 595</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Mail className="h-4 w-4" />
-              <span>geral@mam.co.ao</span>
+              <Mail className="h-3 w-3" />
+              <span className="font-inter">geral@mam.co.ao</span>
             </div>
           </div>
           <div className="hidden md:block">
-            <span>Luanda, Angola</span>
+            <span className="font-inter text-xs">Luanda, Angola</span>
           </div>
         </div>
       </div>
 
-      {/* Main navigation */}
+      {/* Main navigation - cleaner design */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo - more minimal */}
           <Link to="/" className="flex items-center">
-            <div className="bg-industrial-blue text-white px-4 py-2 rounded-lg">
-              <h1 className="font-montserrat font-bold text-xl">M&M</h1>
+            <div className="bg-industrial-blue text-white px-3 py-2 rounded">
+              <h1 className="font-montserrat font-bold text-lg">M&M</h1>
             </div>
             <div className="ml-3">
-              <h2 className="font-montserrat font-bold text-industrial-blue text-lg">
+              <h2 className="font-montserrat font-bold text-industrial-text text-base">
                 MACHADO & MANSOUR
               </h2>
-              <p className="text-industrial-gray text-sm">Soluções Industriais</p>
+              <p className="text-industrial-gray text-xs">Soluções Industriais</p>
             </div>
           </Link>
 
@@ -62,10 +62,10 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-roboto font-medium transition-colors hover:text-industrial-orange ${
+                className={`font-inter font-medium transition-colors hover:text-industrial-accent ${
                   isActive(item.path)
-                    ? 'text-industrial-orange border-b-2 border-industrial-orange'
-                    : 'text-industrial-gray'
+                    ? 'text-industrial-accent border-b-2 border-industrial-accent pb-1'
+                    : 'text-industrial-text'
                 }`}
               >
                 {item.name}
@@ -76,7 +76,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button 
-              className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-medium"
+              className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-medium px-6 py-2 transition-colors"
               asChild
             >
               <Link to="/contacto">Solicitar Orçamento</Link>
@@ -89,25 +89,25 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-industrial-gray" />
+              <X className="h-6 w-6 text-industrial-text" />
             ) : (
-              <Menu className="h-6 w-6 text-industrial-gray" />
+              <Menu className="h-6 w-6 text-industrial-text" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-gray-200">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-industrial-border">
             <div className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-roboto font-medium transition-colors ${
+                  className={`font-inter font-medium transition-colors ${
                     isActive(item.path)
-                      ? 'text-industrial-orange'
-                      : 'text-industrial-gray hover:text-industrial-orange'
+                      ? 'text-industrial-accent'
+                      : 'text-industrial-text hover:text-industrial-accent'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -115,7 +115,7 @@ const Header = () => {
                 </Link>
               ))}
               <Button 
-                className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-medium mt-4"
+                className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-medium mt-4 self-start"
                 asChild
               >
                 <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>

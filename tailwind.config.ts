@@ -20,19 +20,17 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Industrial color palette
+				// Professional industrial color palette
 				'industrial': {
-					'blue': '#0D2C54',
-					'blue-light': '#1F3A5F', 
-					'gray-dark': '#252A34',
-					'gray': '#333333',
-					'gray-light': '#B8B8B8',
-					'gray-lighter': '#EAEAEA',
-					'orange': '#FF7700',
-					'orange-dark': '#F26C22',
-					'yellow': '#FFC107',
-					'green': '#2A9D8F',
-					'background': '#F4F6F8'
+					'blue': '#0A2D5C',        // Corporate dark blue
+					'blue-light': '#1E3A5E',  // Lighter blue variant
+					'gray-dark': '#2D3748',   // Dark graphite
+					'gray': '#4F4F4F',        // Medium gray for text
+					'gray-light': '#F0F0F0',  // Light gray for backgrounds
+					'gray-lighter': '#FAFAFA', // Very light background
+					'accent': '#2A6049',      // Corporate green accent
+					'text': '#333333',        // Primary text color
+					'border': '#E5E7EB'       // Subtle borders
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -40,7 +38,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#0D2C54',
+					DEFAULT: '#0A2D5C',
 					foreground: '#FFFFFF'
 				},
 				secondary: {
@@ -79,8 +77,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				'montserrat': ['Montserrat', 'sans-serif'],
-				'roboto': ['Roboto', 'sans-serif']
+				'inter': ['Inter', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -107,7 +105,7 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(20px)'
+						transform: 'translateY(10px)'
 					},
 					'100%': {
 						opacity: '1',
@@ -118,7 +116,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out'
+				'fade-in': 'fade-in 0.4s ease-out'
 			}
 		}
 	},
