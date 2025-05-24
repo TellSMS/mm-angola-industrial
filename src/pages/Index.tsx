@@ -103,50 +103,54 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section - Minimalist */}
-      <section className="relative bg-gradient-to-r from-industrial-blue to-industrial-blue-light text-white py-24 lg:py-32">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&h=1080&fit=crop")'
-          }}
-        ></div>
-        
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 leading-tight">
-              MACHADO & MANSOUR
-            </h1>
-            <h2 className="font-montserrat font-medium text-2xl lg:text-3xl mb-6 opacity-90">
-              Soluções Industriais de Alta Performance
-            </h2>
-            <p className="font-inter text-lg lg:text-xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Equipamentos, peças e consumíveis de qualidade para otimizar sua operação. 
-              Desde 2016, somos referência em produtos industriais em Angola.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-semibold text-lg px-8 py-4 transition-all duration-200"
-                asChild
-              >
-                <Link to="/produtos">
-                  Conheça Nossos Produtos
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue font-inter font-semibold text-lg px-8 py-4 transition-all duration-200"
-                asChild
-              >
-                <Link to="/contacto">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Fale com um Especialista
-                </Link>
-              </Button>
+      {/* Hero Section - Reorganizado com texto à esquerda e imagem à direita */}
+      <section className="py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Texto à esquerda */}
+            <div className="lg:pr-8">
+              <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-6 text-industrial-blue leading-tight">
+                MACHADO & MANSOUR
+              </h1>
+              <h2 className="font-montserrat font-medium text-2xl lg:text-3xl mb-6 text-industrial-gray-dark">
+                Soluções Industriais de Alta Performance
+              </h2>
+              <p className="font-inter text-lg lg:text-xl mb-8 text-industrial-gray leading-relaxed">
+                Equipamentos, peças e consumíveis de qualidade para otimizar sua operação. 
+                Desde 2016, somos referência em produtos industriais em Angola.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg"
+                  className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-semibold text-lg px-8 py-4 transition-all duration-200"
+                  asChild
+                >
+                  <Link to="/produtos">
+                    Conheça Nossos Produtos
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-industrial-blue text-industrial-blue hover:bg-industrial-accent hover:text-white font-inter font-semibold text-lg px-8 py-4 transition-all duration-200"
+                  asChild
+                >
+                  <Link to="/contacto">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Fale com um Especialista
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Imagem à direita */}
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop" 
+                alt="MACHADO & MANSOUR - Soluções Industriais"
+                className="rounded-lg shadow-xl w-full"
+              />
             </div>
           </div>
         </div>
@@ -184,7 +188,7 @@ const Index = () => {
                   </p>
                   <Link 
                     to={category.link}
-                    className="text-industrial-accent hover:text-industrial-accent/80 font-inter font-medium inline-flex items-center transition-colors duration-200"
+                    className="text-industrial-blue hover:text-industrial-accent font-inter font-medium inline-flex items-center transition-colors duration-200"
                   >
                     Saiba Mais
                     <ArrowRight className="ml-1 h-4 w-4" />
@@ -273,7 +277,7 @@ const Index = () => {
                 crescer e tornar num parceiro de confiança para empresas em todo o país.
               </p>
               <Button 
-                className="bg-industrial-blue hover:bg-industrial-blue-light text-white font-inter font-semibold transition-colors duration-200"
+                className="bg-industrial-blue hover:bg-industrial-accent text-white font-inter font-semibold transition-colors duration-200"
                 asChild
               >
                 <Link to="/sobre">
@@ -317,7 +321,7 @@ const Index = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue font-inter font-semibold transition-all duration-200"
+              className="border-2 border-white text-white hover:bg-industrial-accent hover:border-industrial-accent hover:text-white font-inter font-semibold transition-all duration-200"
               asChild
             >
               <a href="tel:+244946005595">

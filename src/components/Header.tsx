@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-industrial-border">
-      {/* Top contact bar - more minimal */}
+      {/* Top contact bar */}
       <div className="bg-industrial-blue text-white py-1.5 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
@@ -40,10 +40,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main navigation - cleaner design */}
+      {/* Main navigation */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo - more minimal */}
+          {/* Logo */}
           <Link to="/" className="flex items-center">
             <div className="bg-industrial-blue text-white px-3 py-2 rounded">
               <h1 className="font-montserrat font-bold text-lg">M&M</h1>

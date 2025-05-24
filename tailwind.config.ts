@@ -28,7 +28,7 @@ export default {
 					'gray': '#4F4F4F',        // Medium gray for text
 					'gray-light': '#F0F0F0',  // Light gray for backgrounds
 					'gray-lighter': '#FAFAFA', // Very light background
-					'accent': '#2A6049',      // Corporate green accent
+					'accent': '#E85A0C',      // Industrial orange accent
 					'text': '#333333',        // Primary text color
 					'border': '#E5E7EB'       // Subtle borders
 				},

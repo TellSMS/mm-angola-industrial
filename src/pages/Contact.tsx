@@ -9,12 +9,9 @@ import { Textarea } from '@/components/ui/textarea';
 import { 
   Phone, 
   Mail, 
-  MapPin, 
   Clock, 
   Send,
-  MessageCircle,
-  Instagram,
-  Facebook
+  MessageCircle
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -68,85 +65,20 @@ const Contact = () => {
     });
   };
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: "Telefones",
-      details: ["+244 946 005 595 (Principal/WhatsApp)", "+244 923 315 700", "+244 923 313 341"],
-      action: "tel:+244946005595"
-    },
-    {
-      icon: Mail,
-      title: "E-mail",
-      details: ["geral@mam.co.ao", "comercial@mam.co.ao"],
-      action: "mailto:geral@mam.co.ao"
-    },
-    {
-      icon: MapPin,
-      title: "Localização",
-      details: ["Luanda, Angola"],
-      action: null
-    },
-    {
-      icon: Clock,
-      title: "Horário",
-      details: ["Segunda a Sexta: 08:00 - 17:00", "Sábado: 08:00 - 12:00"],
-      action: null
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-industrial-blue to-industrial-blue-light text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-6">
-              Entre em Contacto
-            </h1>
-            <p className="font-roboto text-lg lg:text-xl text-gray-200">
-              Estamos aqui para ajudá-lo a encontrar as melhores soluções industriais 
-              para o seu negócio. Contacte-nos hoje mesmo!
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Info Cards */}
-      <section className="py-16 bg-industrial-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <info.icon className="h-8 w-8 text-industrial-orange" />
-                  </div>
-                  <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
-                    {info.title}
-                  </h3>
-                  <div className="space-y-1">
-                    {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="font-roboto text-gray-600 text-sm">
-                        {info.action && detailIndex === 0 ? (
-                          <a 
-                            href={info.action} 
-                            className="hover:text-industrial-orange transition-colors duration-200"
-                          >
-                            {detail}
-                          </a>
-                        ) : (
-                          detail
-                        )}
-                      </p>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <section className="bg-industrial-blue text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-6">
+            Entre em Contacto
+          </h1>
+          <p className="font-inter text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto">
+            Estamos prontos para ajudá-lo a encontrar as melhores soluções industriais 
+            para o seu negócio
+          </p>
         </div>
       </section>
 
@@ -159,15 +91,14 @@ const Contact = () => {
               <h2 className="font-montserrat font-bold text-3xl text-industrial-blue mb-6">
                 Envie-nos uma Mensagem
               </h2>
-              <p className="font-roboto text-gray-600 mb-8">
-                Preencha o formulário abaixo e a nossa equipa entrará em contacto consigo 
-                o mais breve possível para discutir as suas necessidades.
+              <p className="font-inter text-industrial-gray mb-8">
+                Preencha o formulário e a nossa equipa entrará em contacto consigo.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block font-roboto font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="block font-inter font-medium text-industrial-gray-dark mb-2">
                       Nome *
                     </label>
                     <Input
@@ -177,12 +108,12 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
+                      className="w-full border-industrial-border focus:border-industrial-accent focus:ring-industrial-accent"
                       placeholder="O seu nome"
                     />
                   </div>
                   <div>
-                    <label htmlFor="company" className="block font-roboto font-medium text-gray-700 mb-2">
+                    <label htmlFor="company" className="block font-inter font-medium text-industrial-gray-dark mb-2">
                       Empresa
                     </label>
                     <Input
@@ -191,7 +122,7 @@ const Contact = () => {
                       type="text"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
+                      className="w-full border-industrial-border focus:border-industrial-accent focus:ring-industrial-accent"
                       placeholder="Nome da empresa"
                     />
                   </div>
@@ -199,7 +130,7 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="email" className="block font-roboto font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block font-inter font-medium text-industrial-gray-dark mb-2">
                       E-mail *
                     </label>
                     <Input
@@ -209,12 +140,12 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
+                      className="w-full border-industrial-border focus:border-industrial-accent focus:ring-industrial-accent"
                       placeholder="o-seu-email@exemplo.com"
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block font-roboto font-medium text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block font-inter font-medium text-industrial-gray-dark mb-2">
                       Telefone
                     </label>
                     <Input
@@ -223,14 +154,14 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
+                      className="w-full border-industrial-border focus:border-industrial-accent focus:ring-industrial-accent"
                       placeholder="+244 123 456 789"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block font-roboto font-medium text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block font-inter font-medium text-industrial-gray-dark mb-2">
                     Assunto
                   </label>
                   <Input
@@ -239,13 +170,13 @@ const Contact = () => {
                     type="text"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
+                    className="w-full border-industrial-border focus:border-industrial-accent focus:ring-industrial-accent"
                     placeholder="Assunto da mensagem"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block font-roboto font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block font-inter font-medium text-industrial-gray-dark mb-2">
                     Mensagem *
                   </label>
                   <Textarea
@@ -254,14 +185,14 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full min-h-[120px] border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
-                    placeholder="Descreva as suas necessidades ou faça a sua pergunta..."
+                    className="w-full min-h-[120px] border-industrial-border focus:border-industrial-accent focus:ring-industrial-accent"
+                    placeholder="Descreva as suas necessidades..."
                   />
                 </div>
 
                 <Button 
                   type="submit"
-                  className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold w-full md:w-auto transition-colors duration-200"
+                  className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-semibold w-full md:w-auto transition-colors duration-200"
                   size="lg"
                 >
                   <Send className="mr-2 h-5 w-5" />
@@ -270,132 +201,114 @@ const Contact = () => {
               </form>
             </div>
 
-            {/* Additional Contact Options */}
+            {/* Contact Information */}
             <div>
-              <h2 className="font-montserrat font-bold text-3xl text-industrial-blue mb-6">
-                Outras Formas de Contacto
+              <h2 className="font-montserrat font-bold text-3xl text-industrial-blue mb-8">
+                Informações de Contacto
               </h2>
               
-              {/* WhatsApp */}
-              <Card className="mb-6 hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <MessageCircle className="h-8 w-8 text-green-600 mr-4" />
-                    <div>
-                      <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
-                        WhatsApp
-                      </h3>
-                      <p className="font-roboto text-gray-600">
-                        Contacto direto e rápido
+              <div className="space-y-6">
+                <Card className="border border-industrial-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <Phone className="h-6 w-6 text-industrial-accent mr-4" />
+                      <div>
+                        <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
+                          Telefones
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-inter text-industrial-gray">
+                        <a href="tel:+244946005595" className="hover:text-industrial-accent transition-colors">
+                          +244 946 005 595 (Principal/WhatsApp)
+                        </a>
+                      </p>
+                      <p className="font-inter text-industrial-gray">
+                        <a href="tel:+244923315700" className="hover:text-industrial-accent transition-colors">
+                          +244 923 315 700
+                        </a>
+                      </p>
+                      <p className="font-inter text-industrial-gray">
+                        <a href="tel:+244923313341" className="hover:text-industrial-accent transition-colors">
+                          +244 923 313 341
+                        </a>
                       </p>
                     </div>
-                  </div>
-                  <p className="font-roboto text-gray-600 mb-4">
-                    Para atendimento imediato, envie-nos uma mensagem via WhatsApp. 
-                    Responderemos rapidamente às suas questões.
-                  </p>
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white font-roboto font-semibold transition-colors duration-200"
-                    asChild
-                  >
-                    <a 
-                      href="https://wa.me/244946005595" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <MessageCircle className="mr-2 h-4 w-4" />
-                      Abrir WhatsApp
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
-              {/* Phone */}
-              <Card className="mb-6 hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Phone className="h-8 w-8 text-industrial-orange mr-4" />
-                    <div>
-                      <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
-                        Chamada Telefónica
-                      </h3>
-                      <p className="font-roboto text-gray-600">
-                        Fale directamente connosco
+                <Card className="border border-industrial-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <Mail className="h-6 w-6 text-industrial-accent mr-4" />
+                      <div>
+                        <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
+                          E-mails
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-inter text-industrial-gray">
+                        <a href="mailto:geral@mam.co.ao" className="hover:text-industrial-accent transition-colors">
+                          geral@mam.co.ao
+                        </a>
+                      </p>
+                      <p className="font-inter text-industrial-gray">
+                        <a href="mailto:comercial@mam.co.ao" className="hover:text-industrial-accent transition-colors">
+                          comercial@mam.co.ao
+                        </a>
                       </p>
                     </div>
-                  </div>
-                  <p className="font-roboto text-gray-600 mb-4">
-                    Para discussões detalhadas sobre os seus projetos, 
-                    ligue-nos directamente durante o horário comercial.
-                  </p>
-                  <Button 
-                    className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
-                    asChild
-                  >
-                    <a href="tel:+244946005595">
-                      <Phone className="mr-2 h-4 w-4" />
-                      +244 946 005 595
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
-              {/* Social Media */}
-              <Card className="hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                <CardContent className="p-6">
-                  <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-4">
-                    Redes Sociais
-                  </h3>
-                  <p className="font-roboto text-gray-600 mb-4">
-                    Siga-nos nas redes sociais para novidades e atualizações.
-                  </p>
-                  <div className="flex space-x-4">
-                    <a 
-                      href="#" 
-                      className="flex items-center justify-center w-12 h-12 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors duration-200"
-                    >
-                      <Instagram className="h-5 w-5" />
-                    </a>
-                    <a 
-                      href="#" 
-                      className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
-                    >
-                      <Facebook className="h-5 w-5" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+                <Card className="border border-industrial-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <Clock className="h-6 w-6 text-industrial-accent mr-4" />
+                      <div>
+                        <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
+                          Horário de Funcionamento
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-inter text-industrial-gray">Segunda a Sexta: 08:00 - 17:00</p>
+                      <p className="font-inter text-industrial-gray">Sábado: 08:00 - 12:00</p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-      {/* Company Info Section */}
-      <section className="py-16 bg-industrial-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-montserrat font-bold text-3xl text-industrial-blue mb-4">
-              MACHADO & MANSOUR
-            </h2>
-            <p className="font-roboto text-lg text-gray-600 mb-6">
-              Desde 2016, fornecemos soluções industriais de qualidade em Angola
-            </p>
-            <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
-              <div className="flex items-center justify-center mb-4">
-                <MapPin className="h-12 w-12 text-industrial-orange mr-4" />
-                <div className="text-left">
-                  <h3 className="font-montserrat font-semibold text-xl text-industrial-blue">
-                    Nossa Sede
-                  </h3>
-                  <p className="font-roboto text-gray-600">
-                    Luanda, Angola
-                  </p>
-                </div>
+                <Card className="border border-industrial-border bg-green-50">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <MessageCircle className="h-6 w-6 text-green-600 mr-4" />
+                      <div>
+                        <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
+                          WhatsApp
+                        </h3>
+                      </div>
+                    </div>
+                    <p className="font-inter text-industrial-gray mb-4">
+                      Para atendimento rápido, contacte-nos via WhatsApp.
+                    </p>
+                    <Button 
+                      className="bg-green-600 hover:bg-green-700 text-white font-inter font-semibold transition-colors duration-200"
+                      asChild
+                    >
+                      <a 
+                        href="https://wa.me/244946005595" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <MessageCircle className="mr-2 h-4 w-4" />
+                        Abrir WhatsApp
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
-              <p className="font-roboto text-gray-600 text-center">
-                Visite-nos ou entre em contacto para discutir as suas necessidades industriais. 
-                Estamos sempre prontos para fornecer as melhores soluções para o seu negócio.
-              </p>
             </div>
           </div>
         </div>
