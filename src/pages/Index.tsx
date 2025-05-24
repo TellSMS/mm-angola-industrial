@@ -17,7 +17,11 @@ import {
   Building,
   Truck,
   Factory,
-  Pickaxe
+  Pickaxe,
+  Wheat,
+  Zap as Energy,
+  Settings,
+  HardHat
 } from 'lucide-react';
 
 const Index = () => {
@@ -84,14 +88,14 @@ const Index = () => {
   ];
 
   const industries = [
-    "Construção Civil",
-    "Mineração",
-    "Indústria Alimentar", 
-    "Logística",
-    "Agricultura",
-    "Energia",
-    "Manufatura",
-    "Transportes"
+    { name: "Construção Civil", icon: HardHat },
+    { name: "Mineração", icon: Pickaxe },
+    { name: "Indústria Alimentar", icon: Factory }, 
+    { name: "Logística", icon: Truck },
+    { name: "Agricultura", icon: Wheat },
+    { name: "Energia", icon: Energy },
+    { name: "Manufatura", icon: Settings },
+    { name: "Transportes", icon: Building }
   ];
 
   return (
@@ -123,7 +127,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold text-lg px-8 py-4"
+                className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold text-lg px-8 py-4 transition-all duration-200"
                 asChild
               >
                 <Link to="/produtos">
@@ -134,7 +138,7 @@ const Index = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold text-lg px-8 py-4"
+                className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue hover:border-white font-roboto font-semibold text-lg px-8 py-4 transition-all duration-200"
                 asChild
               >
                 <Link to="/contacto">
@@ -161,10 +165,10 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productCategories.map((category, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 cursor-pointer">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200">
                 <CardContent className="p-8 text-center">
-                  <div className="bg-industrial-orange/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-industrial-orange group-hover:text-white transition-all duration-300">
-                    <category.icon className="h-8 w-8 text-industrial-orange group-hover:text-white" />
+                  <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-industrial-orange group-hover:text-white transition-all duration-300">
+                    <category.icon className="h-8 w-8 text-industrial-blue group-hover:text-white transition-colors duration-300" />
                   </div>
                   <h3 className="font-montserrat font-semibold text-xl text-industrial-blue mb-3">
                     {category.title}
@@ -174,7 +178,7 @@ const Index = () => {
                   </p>
                   <Link 
                     to={category.link}
-                    className="text-industrial-orange hover:text-industrial-orange-dark font-roboto font-medium inline-flex items-center"
+                    className="text-industrial-orange hover:text-industrial-orange-dark font-roboto font-medium inline-flex items-center transition-colors duration-200"
                   >
                     Saiba Mais
                     <ArrowRight className="ml-1 h-4 w-4" />
@@ -201,8 +205,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-industrial-orange/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-industrial-orange transition-all duration-300">
-                  <benefit.icon className="h-10 w-10 text-industrial-orange group-hover:text-white" />
+                <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-industrial-orange transition-all duration-300">
+                  <benefit.icon className="h-10 w-10 text-industrial-blue group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
                   {benefit.title}
@@ -232,11 +236,11 @@ const Index = () => {
             {industries.map((industry, index) => (
               <div 
                 key={index} 
-                className="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
               >
-                <Pickaxe className="h-8 w-8 text-industrial-orange mx-auto mb-3" />
+                <industry.icon className="h-8 w-8 text-industrial-orange mx-auto mb-3" />
                 <p className="font-roboto font-medium text-industrial-blue">
-                  {industry}
+                  {industry.name}
                 </p>
               </div>
             ))}
@@ -262,7 +266,7 @@ const Index = () => {
                 crescer e tornar num parceiro de confiança para empresas em todo o país.
               </p>
               <Button 
-                className="bg-industrial-blue hover:bg-industrial-blue-light text-white font-roboto font-semibold"
+                className="bg-industrial-blue hover:bg-industrial-blue-light text-white font-roboto font-semibold transition-colors duration-200"
                 asChild
               >
                 <Link to="/sobre">
@@ -296,7 +300,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold"
+              className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
               asChild
             >
               <Link to="/contacto">
@@ -307,7 +311,7 @@ const Index = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold"
+              className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue hover:border-white font-roboto font-semibold transition-all duration-200"
               asChild
             >
               <a href="tel:+244946005595">

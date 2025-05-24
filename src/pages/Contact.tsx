@@ -42,8 +42,20 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    toast.success('Mensagem enviada com sucesso! Entraremos em contacto em breve.');
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject || 'Contacto através do site');
+    const body = encodeURIComponent(
+      `Nome: ${formData.name}\n` +
+      `Empresa: ${formData.company || 'Não informado'}\n` +
+      `Email: ${formData.email}\n` +
+      `Telefone: ${formData.phone || 'Não informado'}\n\n` +
+      `Mensagem:\n${formData.message}`
+    );
+    
+    const mailtoLink = `mailto:geral@mam.co.ao?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    
+    toast.success('A abrir o seu cliente de email...');
     
     // Reset form
     setFormData({
@@ -107,9 +119,9 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-industrial-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <info.icon className="h-8 w-8 text-industrial-orange" />
                   </div>
                   <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
@@ -121,7 +133,7 @@ const Contact = () => {
                         {info.action && detailIndex === 0 ? (
                           <a 
                             href={info.action} 
-                            className="hover:text-industrial-orange transition-colors"
+                            className="hover:text-industrial-orange transition-colors duration-200"
                           >
                             {detail}
                           </a>
@@ -165,7 +177,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full"
+                      className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
                       placeholder="O seu nome"
                     />
                   </div>
@@ -179,7 +191,7 @@ const Contact = () => {
                       type="text"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full"
+                      className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
                       placeholder="Nome da empresa"
                     />
                   </div>
@@ -197,7 +209,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full"
+                      className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
                       placeholder="o-seu-email@exemplo.com"
                     />
                   </div>
@@ -211,7 +223,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full"
+                      className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
                       placeholder="+244 123 456 789"
                     />
                   </div>
@@ -227,7 +239,7 @@ const Contact = () => {
                     type="text"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full"
+                    className="w-full border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
                     placeholder="Assunto da mensagem"
                   />
                 </div>
@@ -242,14 +254,14 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full min-h-[120px]"
+                    className="w-full min-h-[120px] border-gray-300 focus:border-industrial-orange focus:ring-industrial-orange"
                     placeholder="Descreva as suas necessidades ou faça a sua pergunta..."
                   />
                 </div>
 
                 <Button 
                   type="submit"
-                  className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold w-full md:w-auto"
+                  className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold w-full md:w-auto transition-colors duration-200"
                   size="lg"
                 >
                   <Send className="mr-2 h-5 w-5" />
@@ -265,7 +277,7 @@ const Contact = () => {
               </h2>
               
               {/* WhatsApp */}
-              <Card className="mb-6 hover:shadow-lg transition-shadow duration-300">
+              <Card className="mb-6 hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <MessageCircle className="h-8 w-8 text-green-600 mr-4" />
@@ -283,7 +295,7 @@ const Contact = () => {
                     Responderemos rapidamente às suas questões.
                   </p>
                   <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white font-roboto font-semibold"
+                    className="bg-green-600 hover:bg-green-700 text-white font-roboto font-semibold transition-colors duration-200"
                     asChild
                   >
                     <a 
@@ -299,7 +311,7 @@ const Contact = () => {
               </Card>
 
               {/* Phone */}
-              <Card className="mb-6 hover:shadow-lg transition-shadow duration-300">
+              <Card className="mb-6 hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <Phone className="h-8 w-8 text-industrial-orange mr-4" />
@@ -317,7 +329,7 @@ const Contact = () => {
                     ligue-nos directamente durante o horário comercial.
                   </p>
                   <Button 
-                    className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold"
+                    className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
                     asChild
                   >
                     <a href="tel:+244946005595">
@@ -329,7 +341,7 @@ const Contact = () => {
               </Card>
 
               {/* Social Media */}
-              <Card className="hover:shadow-lg transition-shadow duration-300">
+              <Card className="hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                 <CardContent className="p-6">
                   <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-4">
                     Redes Sociais
@@ -340,13 +352,13 @@ const Contact = () => {
                   <div className="flex space-x-4">
                     <a 
                       href="#" 
-                      className="flex items-center justify-center w-12 h-12 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors"
+                      className="flex items-center justify-center w-12 h-12 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors duration-200"
                     >
                       <Instagram className="h-5 w-5" />
                     </a>
                     <a 
                       href="#" 
-                      className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
+                      className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
                     >
                       <Facebook className="h-5 w-5" />
                     </a>
@@ -358,32 +370,32 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Company Info Section */}
       <section className="py-16 bg-industrial-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-montserrat font-bold text-3xl text-industrial-blue mb-4">
-              Nossa Localização
+              MACHADO & MANSOUR
             </h2>
-            <p className="font-roboto text-lg text-gray-600">
-              Visite-nos na nossa sede em Luanda, Angola
+            <p className="font-roboto text-lg text-gray-600 mb-6">
+              Desde 2016, fornecemos soluções industriais de qualidade em Angola
             </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="h-96 bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-industrial-orange mx-auto mb-4" />
-                <h3 className="font-montserrat font-semibold text-xl text-industrial-blue mb-2">
-                  MACHADO & MANSOUR
-                </h3>
-                <p className="font-roboto text-gray-600">
-                  Luanda, Angola
-                </p>
-                <p className="font-roboto text-sm text-gray-500 mt-2">
-                  (Mapa interativo será integrado aqui)
-                </p>
+            <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
+              <div className="flex items-center justify-center mb-4">
+                <MapPin className="h-12 w-12 text-industrial-orange mr-4" />
+                <div className="text-left">
+                  <h3 className="font-montserrat font-semibold text-xl text-industrial-blue">
+                    Nossa Sede
+                  </h3>
+                  <p className="font-roboto text-gray-600">
+                    Luanda, Angola
+                  </p>
+                </div>
               </div>
+              <p className="font-roboto text-gray-600 text-center">
+                Visite-nos ou entre em contacto para discutir as suas necessidades industriais. 
+                Estamos sempre prontos para fornecer as melhores soluções para o seu negócio.
+              </p>
             </div>
           </div>
         </div>

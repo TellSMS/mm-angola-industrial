@@ -207,7 +207,7 @@ const Products = () => {
                             {category.brands.slice(0, 9).map((brand, brandIndex) => (
                               <div 
                                 key={brandIndex}
-                                className="bg-white border border-gray-200 rounded-lg p-3 text-center shadow-sm hover:shadow-md transition-shadow"
+                                className="bg-white border border-gray-200 rounded-lg p-3 text-center shadow-sm hover:shadow-md transition-shadow duration-200"
                               >
                                 <span className="font-roboto font-medium text-industrial-blue text-sm">
                                   {brand}
@@ -215,7 +215,7 @@ const Products = () => {
                               </div>
                             ))}
                             {category.brands.length > 9 && (
-                              <div className="bg-industrial-orange/10 border border-industrial-orange/20 rounded-lg p-3 text-center">
+                              <div className="bg-gray-100 border border-gray-200 rounded-lg p-3 text-center">
                                 <span className="font-roboto font-medium text-industrial-orange text-sm">
                                   +{category.brands.length - 9} mais
                                 </span>
@@ -247,7 +247,7 @@ const Products = () => {
                       {/* CTA */}
                       <div className="pt-4">
                         <Button 
-                          className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold"
+                          className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
                           asChild
                         >
                           <Link to="/contacto">
@@ -279,8 +279,8 @@ const Products = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center bg-white p-8 rounded-lg shadow-md">
-              <div className="w-16 h-16 bg-industrial-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="font-montserrat font-bold text-2xl text-industrial-orange">✓</span>
               </div>
               <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
@@ -291,8 +291,8 @@ const Products = () => {
               </p>
             </div>
 
-            <div className="text-center bg-white p-8 rounded-lg shadow-md">
-              <div className="w-16 h-16 bg-industrial-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="font-montserrat font-bold text-2xl text-industrial-orange">⚡</span>
               </div>
               <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
@@ -303,8 +303,8 @@ const Products = () => {
               </p>
             </div>
 
-            <div className="text-center bg-white p-8 rounded-lg shadow-md">
-              <div className="w-16 h-16 bg-industrial-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="font-montserrat font-bold text-2xl text-industrial-orange">🛡️</span>
               </div>
               <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
@@ -331,7 +331,7 @@ const Products = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold"
+              className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
               asChild
             >
               <Link to="/contacto">
@@ -342,7 +342,7 @@ const Products = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold"
+              className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue hover:border-white font-roboto font-semibold transition-all duration-200"
               asChild
             >
               <a href="tel:+244946005595">
