@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -115,7 +114,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop" 
+                src="sobre.jpg" 
                 alt="Instalações MACHADO & MANSOUR"
                 className="rounded-lg shadow-xl w-full"
               />
@@ -125,7 +124,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission, Vision, Values */}
+      {/* Missão, Visão e Valores - NOVO LAYOUT */}
       <section className="py-16 lg:py-24 bg-industrial-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -137,121 +136,72 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            <Card className="text-center">
-              <CardContent className="p-8">
-                <Target className="h-16 w-16 text-industrial-orange mx-auto mb-6" />
-                <h3 className="font-montserrat font-semibold text-2xl text-industrial-blue mb-4">
-                  Missão
-                </h3>
-                <p className="font-roboto text-gray-600">
-                  Fornecer produtos industriais de alta qualidade e soluções completas que 
-                  garantam eficiência e segurança às operações dos nossos clientes, 
-                  contribuindo para o desenvolvimento industrial de Angola.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="p-8">
-                <Eye className="h-16 w-16 text-industrial-orange mx-auto mb-6" />
-                <h3 className="font-montserrat font-semibold text-2xl text-industrial-blue mb-4">
-                  Visão
-                </h3>
-                <p className="font-roboto text-gray-600">
-                  Ser a empresa líder no fornecimento de produtos industriais em Angola, 
-                  reconhecida pela qualidade, inovação e compromisso com o sucesso dos 
-                  nossos clientes e parceiros.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="p-8">
-                <Award className="h-16 w-16 text-industrial-orange mx-auto mb-6" />
-                <h3 className="font-montserrat font-semibold text-2xl text-industrial-blue mb-4">
-                  Compromisso
-                </h3>
-                <p className="font-roboto text-gray-600">
-                  Manter os mais altos padrões de qualidade, profissionalismo e transparência 
-                  em todas as nossas relações comerciais, criando parcerias de valor duradouro.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Values */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <value.icon className="h-10 w-10 text-industrial-orange" />
-                </div>
-                <h4 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
-                  {value.title}
-                </h4>
-                <p className="font-roboto text-gray-600">
-                  {value.description}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Missão */}
+            <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
+              <Target className="h-8 w-8 text-industrial-orange mr-4 flex-shrink-0" />
+              <div>
+                <h4 className="font-montserrat font-semibold text-lg text-industrial-blue mb-1">Missão</h4>
+                <p className="font-roboto text-gray-700 text-sm">
+                  Fornecer produtos industriais de alta qualidade e soluções completas que garantam eficiência e segurança às operações dos nossos clientes, contribuindo para o desenvolvimento industrial de Angola.
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
-              A Nossa Jornada
-            </h2>
-            <p className="font-roboto text-lg text-gray-600 max-w-2xl mx-auto">
-              Marcos importantes na evolução da MACHADO & MANSOUR
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-industrial-orange hidden lg:block"></div>
-            
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                  <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
-                    <Card className="p-6">
-                      <div className="flex items-center mb-4">
-                        <div className="bg-industrial-orange text-white rounded-full w-12 h-12 flex items-center justify-center font-montserrat font-bold">
-                          {milestone.year.slice(-2)}
-                        </div>
-                        <h3 className="font-montserrat font-semibold text-xl text-industrial-blue ml-4">
-                          {milestone.title}
-                        </h3>
-                      </div>
-                      <p className="font-roboto text-gray-600">
-                        {milestone.description}
-                      </p>
-                    </Card>
-                  </div>
-                  
-                  <div className="hidden lg:flex w-2/12 justify-center">
-                    <div className="w-4 h-4 bg-industrial-orange rounded-full"></div>
-                  </div>
-                  
-                  <div className="hidden lg:block w-5/12">
-                    <div className="text-center">
-                      <span className="font-montserrat font-bold text-3xl text-industrial-blue">
-                        {milestone.year}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            </div>
+            {/* Visão */}
+            <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
+              <Eye className="h-8 w-8 text-industrial-orange mr-4 flex-shrink-0" />
+              <div>
+                <h4 className="font-montserrat font-semibold text-lg text-industrial-blue mb-1">Visão</h4>
+                <p className="font-roboto text-gray-700 text-sm">
+                  Ser a empresa líder no fornecimento de produtos industriais em Angola, reconhecida pela qualidade, inovação e compromisso com o sucesso dos nossos clientes e parceiros.
+                </p>
+              </div>
+            </div>
+            {/* Compromisso */}
+            <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
+              <Award className="h-8 w-8 text-industrial-orange mr-4 flex-shrink-0" />
+              <div>
+                <h4 className="font-montserrat font-semibold text-lg text-industrial-blue mb-1">Compromisso</h4>
+                <p className="font-roboto text-gray-700 text-sm">
+                  Manter os mais altos padrões de qualidade, profissionalismo e transparência em todas as nossas relações comerciais, criando parcerias de valor duradouro.
+                </p>
+              </div>
+            </div>
+            {/* Qualidade */}
+            <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
+              <Shield className="h-8 w-8 text-industrial-orange mr-4 flex-shrink-0" />
+              <div>
+                <h4 className="font-montserrat font-semibold text-lg text-industrial-blue mb-1">Qualidade</h4>
+                <p className="font-roboto text-gray-700 text-sm">
+                  Compromisso inabalável com produtos e serviços de excelência
+                </p>
+              </div>
+            </div>
+            {/* Profissionalismo */}
+            <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
+              <Users className="h-8 w-8 text-industrial-orange mr-4 flex-shrink-0" />
+              <div>
+                <h4 className="font-montserrat font-semibold text-lg text-industrial-blue mb-1">Profissionalismo</h4>
+                <p className="font-roboto text-gray-700 text-sm">
+                  Equipa qualificada e atendimento especializado
+                </p>
+              </div>
+            </div>
+            {/* Transparência */}
+            <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
+              <Heart className="h-8 w-8 text-industrial-orange mr-4 flex-shrink-0" />
+              <div>
+                <h4 className="font-montserrat font-semibold text-lg text-industrial-blue mb-1">Transparência</h4>
+                <p className="font-roboto text-gray-700 text-sm">
+                  Relações comerciais baseadas na confiança e honestidade
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Achievements */}
+      {/* Achievements - Os Nossos Conquistas */}
       <section className="py-16 lg:py-24 bg-industrial-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -262,7 +212,6 @@ const About = () => {
               Resultados que demonstram o nosso compromisso com a excelência
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
               <div key={index} className="flex items-center bg-white p-6 rounded-lg shadow-md">
@@ -282,7 +231,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=600&h=400&fit=crop" 
+                src="sobre1.jpg" 
                 alt="Equipa profissional"
                 className="rounded-lg shadow-xl w-full"
               />

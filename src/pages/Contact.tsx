@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -6,10 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  Phone,
+  Mail,
   Send,
   MessageCircle
 } from 'lucide-react';
@@ -155,7 +153,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full border-industrial-border focus:border-industrial-accent focus:ring-industrial-accent"
-                      placeholder="+244 123 456 789"
+                      placeholder="+244 9XX XXX XXX"
                     />
                   </div>
                 </div>
@@ -198,6 +196,7 @@ const Contact = () => {
                   <Send className="mr-2 h-5 w-5" />
                   Enviar Mensagem
                 </Button>
+                <p className="text-xs text-industrial-blue mt-2">O envio do formulário abrirá seu cliente de e-mail para finalizar o envio.</p>
               </form>
             </div>
 
@@ -211,7 +210,7 @@ const Contact = () => {
                 <Card className="border border-industrial-border">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <Phone className="h-6 w-6 text-industrial-accent mr-4" />
+                      <Phone className="h-6 w-6 text-industrial-blue mr-4" />
                       <div>
                         <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
                           Telefones
@@ -241,7 +240,7 @@ const Contact = () => {
                 <Card className="border border-industrial-border">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <Mail className="h-6 w-6 text-industrial-accent mr-4" />
+                      <Mail className="h-6 w-6 text-industrial-blue mr-4" />
                       <div>
                         <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
                           E-mails
@@ -263,27 +262,10 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border border-industrial-border">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <Clock className="h-6 w-6 text-industrial-accent mr-4" />
-                      <div>
-                        <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
-                          Horário de Funcionamento
-                        </h3>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="font-inter text-industrial-gray">Segunda a Sexta: 08:00 - 17:00</p>
-                      <p className="font-inter text-industrial-gray">Sábado: 08:00 - 12:00</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
                 <Card className="border border-industrial-border bg-green-50">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <MessageCircle className="h-6 w-6 text-green-600 mr-4" />
+                      <MessageCircle className="h-6 w-6 text-industrial-blue mr-4" />
                       <div>
                         <h3 className="font-montserrat font-semibold text-lg text-industrial-blue">
                           WhatsApp
@@ -294,11 +276,11 @@ const Contact = () => {
                       Para atendimento rápido, contacte-nos via WhatsApp.
                     </p>
                     <Button 
-                      className="bg-green-600 hover:bg-green-700 text-white font-inter font-semibold transition-colors duration-200"
+                      className="bg-industrial-blue hover:bg-industrial-accent text-white font-inter font-semibold transition-colors duration-200"
                       asChild
                     >
                       <a 
-                        href="https://wa.me/244946005595" 
+                        href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20industriais%20da%20Machado%20%26%20Mansour." 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >

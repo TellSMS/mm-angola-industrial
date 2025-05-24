@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
@@ -12,7 +11,7 @@ const Products = () => {
       id: "baterias",
       title: "Baterias Automotivas e Industriais",
       description: "Baterias de alta performance para viaturas, geradores, empilhadeiras, sistemas de energia solar e aplicações industriais diversas.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
+      image: "bateria.jpg",
       brands: ["Bosch", "Varta", "Midac", "Energizer", "Zeno Battery"],
       features: [
         "Alta durabilidade e confiança",
@@ -26,7 +25,7 @@ const Products = () => {
       id: "lubrificantes",
       title: "Lubrificantes e Óleos Industriais",
       description: "Lubrificantes premium para viaturas, máquinas, geradores e equipamentos industriais. Reduzem ruído, calor e desgaste, aumentando a vida útil dos motores.",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+      image: "oleo.png",
       brands: ["ENOC", "ADNOC", "Shell", "Total"],
       features: [
         "Lubrificantes para máquinas industriais",
@@ -41,7 +40,7 @@ const Products = () => {
       id: "filtros",
       title: "Filtros Industriais",
       description: "Filtros de óleo, ar, combustível e hidráulicos para máquinas, camiões, geradores e equipamentos pesados com eficiência de filtração superior.",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
+      image: "Filtros.jpg",
       brands: ["Hengst Filter", "Mann-Filter", "Fleetguard", "Luber-finer"],
       features: [
         "Eficiência de filtração superior",
@@ -55,7 +54,7 @@ const Products = () => {
       id: "epi",
       title: "Equipamentos de Proteção Individual (EPI)",
       description: "Equipamentos de segurança certificados para empresas da construção civil, minas, fábricas e indústrias em geral.",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop",
+      image: "uniforme.jpg",
       brands: ["Diversas marcas certificadas"],
       features: [
         "Botas e calçados de segurança",
@@ -72,7 +71,7 @@ const Products = () => {
       id: "pneus",
       title: "Pneus Industriais e Automotivos",
       description: "Pneus para viaturas ligeiras, camiões, empilhadeiras, máquinas agrícolas e equipamentos pesados das melhores marcas mundiais.",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop",
+      image: "pneu.jpg",
       brands: ["AVON", "FUZION", "KUMHO", "FALKEN", "BRIDGESTONE", "Continental", "DUNLOP", "BFGoodrich", "Firestone", "MICHELIN", "HERCULES", "KELLY", "GENERAL", "Pirelli", "HANKOOK", "UNIROYAL", "COOPER", "NEXEN", "NOKIAN"],
       features: [
         "Menor compactação do solo",
@@ -86,7 +85,7 @@ const Products = () => {
       id: "soldadura",
       title: "Material de Soldadura",
       description: "Equipamentos completos para soldadura profissional, incluindo máquinas, eletrodos, máscaras, cabos e todos os consumíveis necessários.",
-      image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=600&h=400&fit=crop",
+      image: "sol.jpg",
       brands: ["Diversas marcas profissionais"],
       features: [
         "Máquinas de soldar profissionais",
@@ -100,7 +99,7 @@ const Products = () => {
       id: "equipamentos",
       title: "Equipamentos e Máquinas Industriais",
       description: "Compressores, geradores, ferramentas de construção, máquinas de corte e perfuração para aplicações industriais robustas.",
-      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=600&h=400&fit=crop",
+      image: "maquina.jpg",
       brands: ["Marcas líderes internacionais"],
       features: [
         "Compressores industriais",
@@ -128,40 +127,6 @@ const Products = () => {
               Descubra a nossa vasta gama de produtos industriais de alta qualidade, 
               cuidadosamente selecionados para atender as necessidades do seu negócio
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="py-16 bg-industrial-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-montserrat font-bold text-3xl text-industrial-blue mb-6">
-              Soluções Completas para Todas as Indústrias
-            </h2>
-            <p className="font-roboto text-lg text-gray-600 mb-8">
-              Na MACHADO & MANSOUR, oferecemos uma gama abrangente de produtos industriais 
-              das melhores marcas mundiais. Cada categoria foi cuidadosamente selecionada 
-              para garantir qualidade, durabilidade e performance superior.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="font-montserrat font-bold text-2xl text-industrial-orange">8+</div>
-                <div className="font-roboto text-sm text-gray-600">Anos de Experiência</div>
-              </div>
-              <div className="text-center">
-                <div className="font-montserrat font-bold text-2xl text-industrial-orange">7</div>
-                <div className="font-roboto text-sm text-gray-600">Categorias Principais</div>
-              </div>
-              <div className="text-center">
-                <div className="font-montserrat font-bold text-2xl text-industrial-orange">50+</div>
-                <div className="font-roboto text-sm text-gray-600">Marcas Parceiras</div>
-              </div>
-              <div className="text-center">
-                <div className="font-montserrat font-bold text-2xl text-industrial-orange">100%</div>
-                <div className="font-roboto text-sm text-gray-600">Qualidade Garantida</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -265,59 +230,6 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Quality Assurance */}
-      <section className="py-16 lg:py-24 bg-industrial-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-6">
-              Garantia de Qualidade
-            </h2>
-            <p className="font-roboto text-lg text-gray-600 max-w-3xl mx-auto">
-              Todos os nossos produtos passam por rigoroso controlo de qualidade e são fornecidos 
-              por marcas reconhecidas mundialmente, garantindo performance e durabilidade excepcionais.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-montserrat font-bold text-2xl text-industrial-orange">✓</span>
-              </div>
-              <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
-                Produtos Certificados
-              </h3>
-              <p className="font-roboto text-gray-600">
-                Todos os produtos atendem às normas internacionais de qualidade e segurança
-              </p>
-            </div>
-
-            <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-montserrat font-bold text-2xl text-industrial-orange">⚡</span>
-              </div>
-              <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
-                Entrega Rápida
-              </h3>
-              <p className="font-roboto text-gray-600">
-                Logística eficiente para entrega em todo o território angolano
-              </p>
-            </div>
-
-            <div className="text-center bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-montserrat font-bold text-2xl text-industrial-orange">🛡️</span>
-              </div>
-              <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
-                Suporte Técnico
-              </h3>
-              <p className="font-roboto text-gray-600">
-                Equipa especializada para orientação técnica e pós-venda
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-industrial-blue text-white">
         <div className="container mx-auto px-4 text-center">
@@ -331,21 +243,29 @@ const Products = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
+              className="bg-white text-industrial-blue border-2 border-white font-roboto font-semibold transition-none shadow-none hover:bg-white hover:text-industrial-blue hover:border-white focus:bg-white focus:text-industrial-blue focus:border-white active:bg-white active:text-industrial-blue active:border-white"
               asChild
             >
-              <Link to="/contacto">
+              <a
+                href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20personalizado%20através%20do%20site%20da%20Machado%20%26%20Mansour."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Solicitar Orçamento Personalizado
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
             </Button>
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-industrial-blue hover:border-white font-roboto font-semibold transition-all duration-200"
+              className="bg-white text-industrial-blue border-2 border-white font-roboto font-semibold transition-none shadow-none hover:bg-white hover:text-industrial-blue hover:border-white focus:bg-white focus:text-industrial-blue focus:border-white active:bg-white active:text-industrial-blue active:border-white"
               asChild
             >
-              <a href="tel:+244946005595">
+              <a
+                href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20através%20do%20site%20da%20Machado%20%26%20Mansour."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Falar com Especialista
               </a>
             </Button>

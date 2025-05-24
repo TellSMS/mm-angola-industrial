@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -27,42 +26,42 @@ const Index = () => {
       icon: Battery,
       title: "Baterias",
       description: "Baterias automotivas e industriais de alta performance",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
+      image: "/bateria.jpg",
       link: "/produtos#baterias"
     },
     {
       icon: Droplets,
       title: "Lubrificantes",
       description: "Óleos e lubrificantes premium para equipamentos industriais",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+      image: "/oleo.png",
       link: "/produtos#lubrificantes"
     },
     {
       icon: Filter,
       title: "Filtros",
       description: "Filtros industriais para máquinas e equipamentos",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
+      image: "/Filtros.jpg",
       link: "/produtos#filtros"
     },
     {
       icon: Shield,
       title: "EPI",
       description: "Equipamentos de proteção individual certificados",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop",
+      image: "/uniforme.jpg",
       link: "/produtos#epi"
     },
     {
       icon: CircleDot,
       title: "Pneus",
       description: "Pneus para veículos ligeiros e equipamentos pesados",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop",
+      image: "/pneu.jpg",
       link: "/produtos#pneus"
     },
     {
       icon: Settings,
       title: "Equipamentos",
       description: "Máquinas e ferramentas industriais especializadas",
-      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=600&h=400&fit=crop",
+      image: "/maquina.jpg",
       link: "/produtos#equipamentos"
     }
   ];
@@ -91,66 +90,54 @@ const Index = () => {
   ];
 
   const industries = [
-    { name: "Construção Civil", icon: HardHat },
-    { name: "Mineração", icon: Building }, 
-    { name: "Indústria Alimentar", icon: Factory },
-    { name: "Logística", icon: Truck },
-    { name: "Energia", icon: Zap },
-    { name: "Manufatura", icon: Settings }
+    { name: "Construção Civil", icon: HardHat, description: "Materiais e soluções para obras e infraestrutura." },
+    { name: "Mineração", icon: Building, description: "Equipamentos e insumos para operações de mineração." }, 
+    { name: "Energia", icon: Zap, description: "Componentes e equipamentos para geração e distribuição de energia." },
+    { name: "Manufatura", icon: Settings, description: "Suprimentos e tecnologia para linhas de produção." }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section - Reorganizado com texto à esquerda e imagem à direita */}
-      <section className="py-20 lg:py-32 bg-white">
+      {/* Hero Section - Fundo azul igual ao print */}
+      <section className="py-6 lg:py-3 bg-industrial-blue">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col-reverse lg:flex-row items-center lg:items-center gap-12 lg:gap-20">
             {/* Texto à esquerda */}
-            <div className="lg:pr-8">
-              <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-6 text-industrial-blue leading-tight">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center">
+              <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-4 text-white leading-tight">
                 MACHADO & MANSOUR
               </h1>
-              <h2 className="font-montserrat font-medium text-2xl lg:text-3xl mb-6 text-industrial-gray-dark">
+              <h2 className="font-montserrat font-medium text-2xl lg:text-3xl mb-4 text-white/90">
                 Soluções Industriais de Alta Performance
               </h2>
-              <p className="font-inter text-lg lg:text-xl mb-8 text-industrial-gray leading-relaxed">
-                Equipamentos, peças e consumíveis de qualidade para otimizar sua operação. 
+              <p className="font-inter text-lg lg:text-xl mb-8 text-white/80 leading-relaxed">
+                Equipamentos, peças e consumíveis de qualidade para otimizar sua operação, reduzir falhas e aumentar a produtividade com soluções! <br className="hidden md:block" />
                 Desde 2016, somos referência em produtos industriais em Angola.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  size="lg"
-                  className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-semibold text-lg px-8 py-4 transition-all duration-200"
+                  className="bg-white text-industrial-blue font-inter font-semibold text-lg h-14 px-8 py-0 rounded-lg shadow-md focus:outline-none focus:ring-0 active:bg-white active:text-industrial-blue hover:bg-white hover:text-industrial-blue hover:shadow-md transition-none"
                   asChild
                 >
                   <Link to="/produtos">
-                    Conheça Nossos Produtos
+                    Explore Produtos
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-industrial-blue text-industrial-blue hover:bg-industrial-accent hover:text-white font-inter font-semibold text-lg px-8 py-4 transition-all duration-200"
-                  asChild
-                >
-                  <Link to="/contacto">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Fale com um Especialista
                   </Link>
                 </Button>
               </div>
             </div>
 
             {/* Imagem à direita */}
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop" 
-                alt="MACHADO & MANSOUR - Soluções Industriais"
-                className="rounded-lg shadow-xl w-full"
-              />
+            <div className="w-full lg:w-[480px] xl:w-[520px] flex justify-center items-center">
+              <div className="relative w-full aspect-[4/5] flex items-center justify-center">
+                <img 
+                  src="/hero.jpg" 
+                  alt="MACHADO & MANSOUR - Soluções Industriais"
+                  className="rounded-xl shadow-2xl w-full h-auto object-contain border border-industrial-border"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -201,7 +188,7 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us - Minimal */}
-      <section className="py-20 lg:py-24">
+      <section id="benefits" className="py-20 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
@@ -215,9 +202,12 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <benefit.icon className="h-8 w-8 text-industrial-accent" />
+              <div
+                key={index}
+                className="text-center group bg-white border border-industrial-border rounded-xl p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div className="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-industrial-gray-lighter">
+                  <benefit.icon className="h-8 w-8 text-industrial-blue" />
                 </div>
                 <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
                   {benefit.title}
@@ -231,8 +221,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Divider sutil entre as seções */}
+      <div className="w-full h-[1.5px] bg-industrial-gray-lighter opacity-60 my-2 lg:my-4" />
+
       {/* Industries Served - Clean list */}
-      <section className="py-20 lg:py-24 bg-industrial-gray-lighter">
+      <section id="industries" className="py-20 lg:py-24 bg-industrial-gray-lighter">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
@@ -243,15 +236,20 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {industries.map((industry, index) => (
-              <div 
-                key={index} 
-                className="bg-white p-6 rounded-lg text-center shadow-sm hover:shadow-md transition-shadow duration-300 border border-industrial-border"
+              <div
+                key={index}
+                className="text-center group bg-white border border-industrial-border rounded-xl p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
-                <industry.icon className="h-6 w-6 text-industrial-accent mx-auto mb-3" />
-                <p className="font-inter font-medium text-industrial-text">
+                <div className="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-industrial-gray-lighter">
+                  <industry.icon className="h-8 w-8 text-industrial-blue" />
+                </div>
+                <h3 className="font-montserrat font-semibold text-lg text-industrial-blue mb-3">
                   {industry.name}
+                </h3>
+                <p className="font-inter text-industrial-gray leading-relaxed">
+                  {industry.description}
                 </p>
               </div>
             ))}
@@ -288,7 +286,7 @@ const Index = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop" 
+                src="sobre.jpg" 
                 alt="MACHADO & MANSOUR - Soluções Industriais"
                 className="rounded-lg shadow-xl w-full"
               />
@@ -321,7 +319,7 @@ const Index = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-industrial-accent hover:border-industrial-accent hover:text-white font-inter font-semibold transition-all duration-200"
+              className="border-2 border-white text-industrial-blue bg-white hover:bg-industrial-accent hover:border-industrial-accent hover:text-white font-inter font-semibold transition-all duration-200"
               asChild
             >
               <a href="tel:+244946005595">
