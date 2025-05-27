@@ -45,14 +45,9 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
+            {/* TODO: Substituir por logotipo real da empresa */}
             <div className="bg-industrial-blue text-white px-3 py-2 rounded">
-              <h1 className="font-montserrat font-bold text-lg">M&M</h1>
-            </div>
-            <div className="ml-3">
-              <h2 className="font-montserrat font-bold text-industrial-text text-base">
-                MACHADO & MANSOUR
-              </h2>
-              <p className="text-industrial-gray text-xs">Soluções Industriais</p>
+              <h1 className="font-montserrat font-bold text-lg">LOGO</h1>
             </div>
           </Link>
 

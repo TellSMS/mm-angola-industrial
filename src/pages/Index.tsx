@@ -35,15 +35,16 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section - MANTENDO EXATAMENTE COMO ESTAVA ANTES */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content - Left Side */}
             <div className="space-y-6">
-              <h1 className="font-montserrat font-bold text-4xl lg:text-6xl text-industrial-blue leading-tight">
-                MACHADO & MANSOUR
-              </h1>
+              {/* TODO: Substituir por logotipo real da empresa */}
+              <div className="bg-[#15335E] text-white px-6 py-3 rounded-lg inline-block mb-4">
+                <span className="font-montserrat font-bold text-xl">LOGO</span>
+              </div>
               <h2 className="font-montserrat font-semibold text-2xl lg:text-3xl text-industrial-orange">
                 Soluções Industriais de Alta Performance
               </h2>
@@ -80,7 +81,7 @@ const Index = () => {
               <div className="relative z-10">
                 <img 
                   src="hero.jpg" 
-                  alt="MACHADO & MANSOUR - Soluções Industriais"
+                  alt="Soluções Industriais"
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />
               </div>
@@ -98,7 +99,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
-              Porquê Escolher a MACHADO & MANSOUR?
+              Porquê Escolher a nossa empresa?
             </h2>
             <div className="w-24 h-1 bg-industrial-orange mx-auto mb-6"></div>
             <p className="font-roboto text-lg text-gray-600 max-w-3xl mx-auto">
