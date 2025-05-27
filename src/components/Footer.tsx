@@ -24,15 +24,15 @@ const Footer = () => {
               Fornecedor líder de produtos industriais em Angola desde 2016, oferecendo soluções completas e de qualidade para diversos setores.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-700 hover:text-[#15335E] transition-colors">
+              <a href="#" className="text-gray-700 hover:text-industrial-orange transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-700 hover:text-[#15335E] transition-colors">
+              <a href="#" className="text-gray-700 hover:text-industrial-orange transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
               <a 
                 href="https://wa.me/244946005595" 
-                className="text-gray-700 hover:text-[#15335E] transition-colors"
+                className="text-gray-700 hover:text-industrial-orange transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -46,22 +46,22 @@ const Footer = () => {
             <h4 className="font-montserrat font-semibold text-lg mb-4 text-black">Links Rápidos</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-700 hover:text-[#15335E] transition-colors font-roboto">
+                <Link to="/" className="text-gray-700 hover:text-industrial-orange transition-colors font-roboto">
                   Início
                 </Link>
               </li>
               <li>
-                <Link to="/sobre" className="text-gray-700 hover:text-[#15335E] transition-colors font-roboto">
+                <Link to="/sobre" className="text-gray-700 hover:text-industrial-orange transition-colors font-roboto">
                   Sobre Nós
                 </Link>
               </li>
               <li>
-                <Link to="/produtos" className="text-gray-700 hover:text-[#15335E] transition-colors font-roboto">
+                <Link to="/produtos" className="text-gray-700 hover:text-industrial-orange transition-colors font-roboto">
                   Produtos
                 </Link>
               </li>
               <li>
-                <Link to="/contacto" className="text-gray-700 hover:text-[#15335E] transition-colors font-roboto">
+                <Link to="/contacto" className="text-gray-700 hover:text-industrial-orange transition-colors font-roboto">
                   Contacto
                 </Link>
               </li>
@@ -122,11 +122,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <style jsx global>{`
-        footer a:hover, footer a:focus {
-          color: #15335E !important;
-        }
-      `}</style>
     </footer>
   );
 };
