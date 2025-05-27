@@ -65,7 +65,7 @@ const FeaturedProductsSection = () => {
                   </p>
                   <Button 
                     variant="outline" 
-                    className="w-full border-industrial-blue text-industrial-blue hover:bg-industrial-orange hover:border-industrial-orange hover:text-white transition-all duration-200"
+                    className="w-full border-industrial-blue text-industrial-blue hover:bg-industrial-blue hover:text-white hover:border-industrial-blue transition-all duration-300 shadow-none"
                     asChild
                   >
                     <Link to={`/produtos#${product.id}`}>
@@ -82,7 +82,7 @@ const FeaturedProductsSection = () => {
         <div className="text-center mt-12">
           <Button 
             size="lg"
-            className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
+            className="bg-industrial-orange hover:bg-orange-600 text-white font-roboto font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
             asChild
           >
             <Link to="/produtos">

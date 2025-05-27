@@ -56,7 +56,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg"
-                  className="bg-industrial-orange hover:bg-industrial-orange-dark text-white font-roboto font-semibold transition-colors duration-200"
+                  className="bg-industrial-orange hover:bg-orange-600 text-white font-roboto font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                   asChild
                 >
                   <Link to="/produtos">
@@ -67,7 +67,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold transition-all duration-200"
+                  className="border-white text-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
                   asChild
                 >
                   <Link to="/contacto">
@@ -145,7 +145,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="bg-industrial-orange hover:bg-industrial-orange-dark text-white border-2 border-industrial-orange font-roboto font-semibold transition-colors duration-200"
+              className="bg-industrial-orange hover:bg-orange-600 text-white border-2 border-industrial-orange hover:border-orange-600 font-roboto font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               asChild
             >
               <a
@@ -160,7 +160,7 @@ const Index = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="bg-transparent text-white border-2 border-white font-roboto font-semibold hover:bg-white hover:text-industrial-blue transition-all duration-200"
+              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
               asChild
             >
               <Link to="/contacto">

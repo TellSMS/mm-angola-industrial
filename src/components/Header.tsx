@@ -57,10 +57,10 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-inter font-medium transition-colors hover:text-industrial-accent ${
+                className={`font-inter font-medium transition-all duration-300 hover:text-industrial-orange ${
                   isActive(item.path)
-                    ? 'text-industrial-accent border-b-2 border-industrial-accent pb-1'
-                    : 'text-industrial-text'
+                    ? 'text-industrial-orange border-b-2 border-industrial-orange pb-1'
+                    : 'text-industrial-text hover:scale-105'
                 }`}
               >
                 {item.name}
@@ -71,7 +71,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button 
-              className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-medium px-6 py-2 transition-colors"
+              className="bg-industrial-orange hover:bg-orange-600 text-white font-inter font-medium px-6 py-2 transition-all duration-300 shadow-md hover:shadow-lg"
               asChild
             >
               <Link to="/contacto">Solicitar Orçamento</Link>
@@ -99,10 +99,10 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-inter font-medium transition-colors ${
+                  className={`font-inter font-medium transition-all duration-300 ${
                     isActive(item.path)
-                      ? 'text-industrial-accent'
-                      : 'text-industrial-text hover:text-industrial-accent'
+                      ? 'text-industrial-orange'
+                      : 'text-industrial-text hover:text-industrial-orange'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -110,7 +110,7 @@ const Header = () => {
                 </Link>
               ))}
               <Button 
-                className="bg-industrial-accent hover:bg-industrial-accent/90 text-white font-inter font-medium mt-4 self-start"
+                className="bg-industrial-orange hover:bg-orange-600 text-white font-inter font-medium mt-4 self-start transition-all duration-300 shadow-md hover:shadow-lg"
                 asChild
               >
                 <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>
