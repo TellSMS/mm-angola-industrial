@@ -13,7 +13,7 @@ const Products = () => {
       title: "Pneus Industriais e Automotivos",
       description: "Pneus para veículos ligeiros e pesados, motociclos, máquinas e equipamentos industriais.",
       image: "pneu.jpg",
-      brands: ["ROCKBUSTER", "TRELLEBORG", "BKT", "AVON", "FUZION", "KUMHO", "FALKEN", "BRIDGESTONE", "Continental", "DUNLOP", "BFGoodrich", "Firestone", "MICHELIN", "HERCULES", "KELLY", "GENERAL", "Pirelli", "HANKOOK", "UNIROYAL", "COOPER", "NEXEN", "NOKIAN"],
+      brands: ["ROCKBUSTER", "TRELLEBORG", "BKT"],
       features: [
         "Menor compactação do solo",
         "Maior conforto para o operador",
@@ -41,7 +41,7 @@ const Products = () => {
       title: "Lubrificantes e Óleos Industriais",
       description: "Lubrificantes para motociclos, automóveis, veículos pesados e maquinarias.",
       image: "oleo.png",
-      brands: ["MOBIL", "NGOL", "e entre outras", "ENOC", "ADNOC", "Shell", "Total"],
+      brands: ["MOBIL", "NGOL", "e entre outras"],
       features: [
         "Lubrificantes para máquinas industriais",
         "Óleos têxteis especializados",

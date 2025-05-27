@@ -10,8 +10,9 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
+              {/* TODO: Substituir por logotipo real da empresa */}
               <div className="bg-[#15335E] text-white px-6 py-2 rounded-lg flex items-center justify-center">
-                <h3 className="font-montserrat font-bold text-lg">M&amp;M</h3>
+                <h3 className="font-montserrat font-bold text-lg">LOGO</h3>
               </div>
               <div className="ml-3">
                 <h4 className="font-montserrat font-bold text-black text-base leading-tight">
