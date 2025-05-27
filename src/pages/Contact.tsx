@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -224,6 +225,11 @@ const Contact = () => {
                         </a>
                       </p>
                       <p className="font-inter text-industrial-gray">
+                        <a href="tel:+244946005538" className="hover:text-industrial-accent transition-colors">
+                          +244 946 005 538
+                        </a>
+                      </p>
+                      <p className="font-inter text-industrial-gray">
                         <a href="tel:+244923315700" className="hover:text-industrial-accent transition-colors">
                           +244 923 315 700
                         </a>
@@ -248,6 +254,11 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="space-y-2">
+                      <p className="font-inter text-industrial-gray">
+                        <a href="mailto:machado@mam.co.ao" className="hover:text-industrial-accent transition-colors">
+                          machado@mam.co.ao
+                        </a>
+                      </p>
                       <p className="font-inter text-industrial-gray">
                         <a href="mailto:geral@mam.co.ao" className="hover:text-industrial-accent transition-colors">
                           geral@mam.co.ao

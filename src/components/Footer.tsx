@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 
@@ -71,12 +72,13 @@ const Footer = () => {
           <div>
             <h4 className="font-montserrat font-semibold text-lg mb-4 text-black">Produtos</h4>
             <ul className="space-y-2 text-gray-700 font-roboto">
+              <li>Pneus Industriais</li>
               <li>Baterias Automotivas</li>
               <li>Lubrificantes Industriais</li>
               <li>Filtros Industriais</li>
               <li>Equipamentos EPI</li>
-              <li>Pneus e Material de Soldadura</li>
-              <li>Máquinas Industriais</li>
+              <li>Material de Soldadura</li>
+              <li>Equipamentos Diversos</li>
             </ul>
           </div>
 
@@ -88,6 +90,7 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-industrial-orange mt-1" />
                 <div className="font-roboto">
                   <p className="text-gray-700">+244 946 005 595</p>
+                  <p className="text-gray-700">+244 946 005 538</p>
                   <p className="text-gray-700">+244 923 315 700</p>
                   <p className="text-gray-700">+244 923 313 341</p>
                 </div>
@@ -95,6 +98,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-industrial-orange mt-1" />
                 <div className="font-roboto">
+                  <p className="text-gray-700">machado@mam.co.ao</p>
                   <p className="text-gray-700">geral@mam.co.ao</p>
                   <p className="text-gray-700">comercial@mam.co.ao</p>
                 </div>

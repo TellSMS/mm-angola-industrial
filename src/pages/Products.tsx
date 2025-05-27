@@ -1,3 +1,4 @@
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
@@ -7,6 +8,20 @@ import { ArrowRight } from 'lucide-react';
 
 const Products = () => {
   const productCategories = [
+    {
+      id: "pneus",
+      title: "Pneus Industriais e Automotivos",
+      description: "Pneus para veículos ligeiros e pesados, motociclos, máquinas e equipamentos industriais.",
+      image: "pneu.jpg",
+      brands: ["ROCKBUSTER", "TRELLEBORG", "BKT", "AVON", "FUZION", "KUMHO", "FALKEN", "BRIDGESTONE", "Continental", "DUNLOP", "BFGoodrich", "Firestone", "MICHELIN", "HERCULES", "KELLY", "GENERAL", "Pirelli", "HANKOOK", "UNIROYAL", "COOPER", "NEXEN", "NOKIAN"],
+      features: [
+        "Menor compactação do solo",
+        "Maior conforto para o operador",
+        "Maior economia de combustível",
+        "Maior durabilidade",
+        "Variedade para todas as aplicações"
+      ]
+    },
     {
       id: "baterias",
       title: "Baterias Automotivas e Industriais",
@@ -24,9 +39,9 @@ const Products = () => {
     {
       id: "lubrificantes",
       title: "Lubrificantes e Óleos Industriais",
-      description: "Lubrificantes premium para viaturas, máquinas, geradores e equipamentos industriais. Reduzem ruído, calor e desgaste, aumentando a vida útil dos motores.",
+      description: "Lubrificantes para motociclos, automóveis, veículos pesados e maquinarias.",
       image: "oleo.png",
-      brands: ["ENOC", "ADNOC", "Shell", "Total"],
+      brands: ["MOBIL", "NGOL", "e entre outras", "ENOC", "ADNOC", "Shell", "Total"],
       features: [
         "Lubrificantes para máquinas industriais",
         "Óleos têxteis especializados",
@@ -34,20 +49,6 @@ const Products = () => {
         "Lubrificantes para motores a gás",
         "Lubrificantes de refrigeração",
         "Lubrificantes para navios"
-      ]
-    },
-    {
-      id: "filtros",
-      title: "Filtros Industriais",
-      description: "Filtros de óleo, ar, combustível e hidráulicos para máquinas, camiões, geradores e equipamentos pesados com eficiência de filtração superior.",
-      image: "Filtros.jpg",
-      brands: ["Hengst Filter", "Mann-Filter", "Fleetguard", "Luber-finer"],
-      features: [
-        "Eficiência de filtração superior",
-        "Proteção completa de equipamentos",
-        "Variedade para todos os tipos",
-        "Longa duração",
-        "Fácil instalação"
       ]
     },
     {
@@ -64,21 +65,22 @@ const Products = () => {
         "Coletes refletivos",
         "Fardamentos profissionais",
         "Máscaras e protetores auriculares",
-        "Cinturões de segurança e mosquetões"
+        "Cinturões de segurança e mosquetões",
+        "EPI completo para Combate Ao Incêndio"
       ]
     },
     {
-      id: "pneus",
-      title: "Pneus Industriais e Automotivos",
-      description: "Pneus para viaturas ligeiras, camiões, empilhadeiras, máquinas agrícolas e equipamentos pesados das melhores marcas mundiais.",
-      image: "pneu.jpg",
-      brands: ["AVON", "FUZION", "KUMHO", "FALKEN", "BRIDGESTONE", "Continental", "DUNLOP", "BFGoodrich", "Firestone", "MICHELIN", "HERCULES", "KELLY", "GENERAL", "Pirelli", "HANKOOK", "UNIROYAL", "COOPER", "NEXEN", "NOKIAN"],
+      id: "filtros",
+      title: "Filtros Industriais",
+      description: "Filtros de óleo, ar, combustível e hidráulicos para máquinas, camiões, geradores e equipamentos pesados com eficiência de filtração superior.",
+      image: "Filtros.jpg",
+      brands: ["Hengst Filter", "Mann-Filter", "Fleetguard", "Luber-finer"],
       features: [
-        "Menor compactação do solo",
-        "Maior conforto para o operador",
-        "Maior economia de combustível",
-        "Maior durabilidade",
-        "Variedade para todas as aplicações"
+        "Eficiência de filtração superior",
+        "Proteção completa de equipamentos",
+        "Variedade para todos os tipos",
+        "Longa duração",
+        "Fácil instalação"
       ]
     },
     {
@@ -97,8 +99,8 @@ const Products = () => {
     },
     {
       id: "equipamentos",
-      title: "Equipamentos e Máquinas Industriais",
-      description: "Compressores, geradores, ferramentas de construção, máquinas de corte e perfuração para aplicações industriais robustas.",
+      title: "Equipamentos Diversos",
+      description: "Máquinas de elevação, máquinas industriais.",
       image: "maquina.jpg",
       brands: ["Marcas líderes internacionais"],
       features: [
