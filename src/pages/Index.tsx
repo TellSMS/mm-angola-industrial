@@ -35,20 +35,21 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section - MANTENDO EXATAMENTE COMO ESTAVA ANTES */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="container mx-auto px-4">
+      {/* Hero Section - LAYOUT ORIGINAL RESTAURADO */}
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-industrial-blue via-industrial-blue to-blue-800">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content - Left Side */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-white">
               {/* TODO: Substituir por logotipo real da empresa */}
-              <div className="bg-[#15335E] text-white px-6 py-3 rounded-lg inline-block mb-4">
-                <span className="font-montserrat font-bold text-xl">LOGO</span>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-lg inline-block mb-4">
+                <span className="font-montserrat font-bold text-xl text-white">LOGO</span>
               </div>
               <h2 className="font-montserrat font-semibold text-2xl lg:text-3xl text-industrial-orange">
                 Soluções Industriais de Alta Performance
               </h2>
-              <p className="font-roboto text-lg lg:text-xl text-gray-600 leading-relaxed">
+              <p className="font-roboto text-lg lg:text-xl text-white/90 leading-relaxed">
                 Seu fornecedor estratégico de produtos industriais em Angola. 
                 Equipamentos, peças e consumíveis de qualidade para otimizar sua operação.
               </p>
@@ -66,7 +67,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-industrial-blue text-industrial-blue hover:bg-industrial-orange hover:border-industrial-orange hover:text-white font-roboto font-semibold transition-all duration-200"
+                  className="border-white text-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold transition-all duration-200"
                   asChild
                 >
                   <Link to="/contacto">
@@ -85,7 +86,7 @@ const Index = () => {
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-industrial-orange/20 to-industrial-blue/20 rounded-lg transform translate-x-4 translate-y-4 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-industrial-orange/20 to-white/10 rounded-lg transform translate-x-4 translate-y-4 -z-10"></div>
             </div>
           </div>
         </div>

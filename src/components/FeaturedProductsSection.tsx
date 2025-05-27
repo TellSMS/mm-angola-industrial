@@ -24,7 +24,7 @@ const FeaturedProductsSection = () => {
       image: "oleo.png"
     },
     {
-      id: "epi",
+      id: "equipamentos",
       title: "EPI",
       description: "Equipamentos de segurança certificados para empresas de todos os setores.",
       image: "uniforme.jpg"
