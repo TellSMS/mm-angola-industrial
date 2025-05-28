@@ -68,7 +68,7 @@ const FeaturedProductsSection = () => {
                     className="w-full border-industrial-blue text-industrial-blue hover:bg-industrial-blue hover:text-white hover:border-industrial-blue transition-all duration-300 shadow-none"
                     asChild
                   >
-                    <Link to={`/produtos#${product.id}`}>
+                    <Link to={`/produtos#${product.id === "equipamentos" ? "epi" : product.id}`}>
                       Saiba Mais
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

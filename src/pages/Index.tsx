@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FeaturedProductsSection from '@/components/FeaturedProductsSection';
@@ -50,8 +49,7 @@ const Index = () => {
                 Soluções Industriais de Alta Performance
               </h2>
               <p className="font-roboto text-lg lg:text-xl text-white/90 leading-relaxed">
-                Seu fornecedor estratégico de produtos industriais em Angola. 
-                Equipamentos, peças e consumíveis de qualidade para otimizar sua operação.
+                Equipamentos, produtos e serviços de qualidade para optimizar a sua operação, reduzir falhas e aumentar a sua produtividade com soluções! Desde 2016, somos referência em Angola.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
