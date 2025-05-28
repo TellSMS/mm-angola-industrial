@@ -1,4 +1,5 @@
-
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
@@ -7,6 +8,24 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const Products = () => {
+  const location = useLocation();
+
+  // Effect to handle scroll to anchor when navigating from other pages
+  useEffect(() => {
+    if (location.hash) {
+      // Small delay to ensure the page has rendered
+      setTimeout(() => {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   const productCategories = [
     {
       id: "pneus",
