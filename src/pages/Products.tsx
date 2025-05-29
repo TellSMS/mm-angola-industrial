@@ -31,7 +31,7 @@ const Products = () => {
       id: "pneus",
       title: "Pneus Industriais e Automotivos",
       description: "Pneus para veículos ligeiros e pesados, motociclos, máquinas e equipamentos industriais.",
-      image: "pneu.jpg",
+      image: "pneu.jpeg",
       brands: ["ROCKBUSTER", "TRELLEBORG", "BKT"],
       features: [
         "Menor compactação do solo",
@@ -45,7 +45,7 @@ const Products = () => {
       id: "baterias",
       title: "Baterias Automotivas e Industriais",
       description: "Baterias de alta performance para viaturas, geradores, empilhadeiras, sistemas de energia solar e aplicações industriais diversas.",
-      image: "bateria.jpg",
+      image: "bateria.jpeg",
       brands: ["Bosch", "Varta", "Midac", "Energizer", "Zeno Battery"],
       features: [
         "Alta durabilidade e confiança",

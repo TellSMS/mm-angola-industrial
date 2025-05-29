@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 
@@ -10,15 +9,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              {/* TODO: Substituir por logotipo real da empresa */}
-              <div className="bg-[#15335E] text-white px-6 py-2 rounded-lg flex items-center justify-center">
-                <h3 className="font-montserrat font-bold text-lg">LOGO</h3>
-              </div>
-              <div className="ml-3">
-                <h4 className="font-montserrat font-bold text-black text-base leading-tight">
-                  MACHADO & MANSOUR
-                </h4>
-                <span className="font-roboto text-gray-600 text-sm block mt-1">Soluções Industriais</span>
+              <div className="ml-3 flex items-center">
+                <img src="/logo.jpeg" alt="Logo da empresa" className="h-10 w-auto mr-2 rounded shadow" />
               </div>
             </div>
             <p className="text-gray-700 mb-4 font-roboto">

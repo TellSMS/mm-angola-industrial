@@ -41,10 +41,6 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content - Left Side */}
             <div className="space-y-6 text-white">
-              {/* TODO: Substituir por logotipo real da empresa */}
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-lg inline-block mb-4">
-                <span className="font-montserrat font-bold text-xl text-white">LOGO</span>
-              </div>
               <h2 className="font-montserrat font-semibold text-2xl lg:text-3xl text-industrial-orange">
                 Soluções Industriais de Alta Performance
               </h2>
@@ -54,18 +50,18 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg"
-                  className="bg-industrial-orange hover:bg-orange-600 text-white font-roboto font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-roboto font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                   asChild
                 >
                   <Link to="/produtos">
-                    Conheça Nossos Produtos
+                    Ver Todos os Produtos
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+                  className="border-white text-industrial-blue bg-white hover:bg-white hover:text-industrial-blue font-roboto font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
                   asChild
                 >
                   <Link to="/contacto">
@@ -129,6 +125,25 @@ const Index = () => {
 
       {/* Sectors Section */}
       <SectorsSection />
+
+      {/* Sobre Section */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">Sobre Nós</h2>
+            <div className="w-24 h-1 bg-industrial-orange mb-6"></div>
+            <p className="font-roboto text-lg text-gray-700 mb-4">
+              A Machado & Mansour é referência em soluções industriais em Angola desde 2016. Oferecemos uma linha completa de produtos e serviços para diversos setores, sempre com qualidade, agilidade e atendimento especializado. Nossa missão é impulsionar a produtividade e a segurança das empresas angolanas, fornecendo marcas reconhecidas e suporte técnico de excelência.
+            </p>
+            <Link to="/sobre" className="inline-block mt-2 text-industrial-orange font-semibold hover:underline font-roboto">
+              Saiba mais sobre a nossa história
+            </Link>
+          </div>
+          <div>
+            <img src="/sobre.jpg" alt="Sobre a Machado & Mansour" className="rounded-lg shadow-lg w-full h-auto" />
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-industrial-blue text-white">

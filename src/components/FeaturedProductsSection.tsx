@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -9,13 +8,13 @@ const FeaturedProductsSection = () => {
       id: "pneus",
       title: "Pneus",
       description: "Pneus para veículos ligeiros e pesados, motociclos, máquinas e equipamentos industriais.",
-      image: "pneu.jpg"
+      image: "pneu.jpeg"
     },
     {
       id: "baterias",
       title: "Baterias",
       description: "Baterias de alta performance para viaturas, geradores e aplicações industriais.",
-      image: "bateria.jpg"
+      image: "bateria.jpeg"
     },
     {
       id: "lubrificantes",
@@ -82,7 +81,7 @@ const FeaturedProductsSection = () => {
         <div className="text-center mt-12">
           <Button 
             size="lg"
-            className="bg-industrial-orange hover:bg-orange-600 text-white font-roboto font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-roboto font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
             asChild
           >
             <Link to="/produtos">

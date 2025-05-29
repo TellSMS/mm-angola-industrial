@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -45,10 +44,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            {/* TODO: Substituir por logotipo real da empresa */}
-            <div className="bg-industrial-blue text-white px-3 py-2 rounded">
-              <h1 className="font-montserrat font-bold text-lg">LOGO</h1>
-            </div>
+            <img src="/logo.jpeg" alt="Logo da empresa" className="h-10 w-auto mr-2 rounded shadow" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -71,7 +67,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button 
-              className="bg-industrial-orange hover:bg-orange-600 text-white font-inter font-medium px-6 py-2 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="bg-orange-500 hover:bg-orange-600 text-white font-inter font-medium px-6 py-2 transition-all duration-300 shadow-md hover:shadow-lg"
               asChild
             >
               <Link to="/contacto">Solicitar Orçamento</Link>
