@@ -75,7 +75,7 @@ const Index = () => {
             <div className="relative">
               <div className="relative z-10">
                 <img 
-                  src="hero.jpg" 
+                  src="hero.jpeg" 
                   alt="Soluções Industriais"
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />
