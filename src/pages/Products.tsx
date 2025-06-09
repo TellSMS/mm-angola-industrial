@@ -32,7 +32,30 @@ const Products = () => {
       title: "Pneus Industriais e Automotivos",
       description: "Pneus para veículos ligeiros e pesados, motociclos, máquinas e equipamentos industriais.",
       image: "pneu.jpeg",
-      brands: ["ROCKBUSTER", "TRELLEBORG", "BKT"],
+      brands: [
+        "Avon Tyres",
+        "Fuzion",
+        "Kumho Tire",
+        "Falken",
+        "Bridgestone",
+        "Continental",
+        "Dunlop",
+        "BFGoodrich",
+        "Mastercraft",
+        "Michelin",
+        "Hercules Tires",
+        "Kelly Tires",
+        "General Tire",
+        "Pirelli",
+        "Hankook",
+        "Uniroyal",
+        "Cooper Tires",
+        "Nexen Tire",
+        "Nokian Tyres",
+        "Zeetex",
+        "RockBuster",
+        "RoadOne"
+      ],
       features: [
         "Menor compactação do solo",
         "Maior conforto para o operador",
@@ -190,7 +213,7 @@ const Products = () => {
                             Marcas Principais
                           </h4>
                           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                            {category.brands.slice(0, 9).map((brand, brandIndex) => (
+                            {category.brands.map((brand, brandIndex) => (
                               <div 
                                 key={brandIndex}
                                 className="bg-white border border-gray-200 rounded-lg p-3 text-center shadow-sm hover:shadow-md transition-shadow duration-200"
@@ -200,13 +223,6 @@ const Products = () => {
                                 </span>
                               </div>
                             ))}
-                            {category.brands.length > 9 && (
-                              <div className="bg-gray-100 border border-gray-200 rounded-lg p-3 text-center">
-                                <span className="font-roboto font-medium text-industrial-orange text-sm">
-                                  +{category.brands.length - 9} mais
-                                </span>
-                              </div>
-                            )}
                           </div>
                         </div>
                       )}

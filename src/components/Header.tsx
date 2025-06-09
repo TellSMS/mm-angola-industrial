@@ -30,7 +30,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-3 w-3" />
-              <span className="font-inter">geral@mam.co.ao</span>
+              <span className="font-inter">machado@mam.co.ao</span>
             </div>
           </div>
           <div className="hidden md:block">
