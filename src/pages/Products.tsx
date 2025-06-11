@@ -86,7 +86,7 @@ const Products = () => {
       title: "Lubrificantes e Óleos Industriais",
       description: "Lubrificantes de alta performance para motores e sistemas mecânicos, com foco na redução de atrito, desgaste e aumento da durabilidade dos componentes.",
       image: "oleo.png",
-      brands: ["ENOC", "ADNOC", "SHELL", "TOTAL"],
+      brands: ["ENOC", "ADNOC", "SHELL", "TOTAL", "Mobil", "NGOL"],
       features: [
         "Lubrificantes para máquinas industriais",
         "Indústria têxtil",
