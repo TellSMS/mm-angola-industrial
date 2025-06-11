@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -67,48 +68,55 @@ const Products = () => {
     {
       id: "baterias",
       title: "Baterias Automotivas e Industriais",
-      description: "Baterias de alta performance para viaturas, geradores, empilhadeiras, sistemas de energia solar e aplicações industriais diversas.",
+      description: "Antes de escolher a marca de bateria ideal, é importante saber como avaliá-la. As baterias disponíveis garantem qualidade e confiabilidade.",
       image: "bateria.jpeg",
-      brands: ["Bosch", "Varta", "Midac", "Energizer", "Zeno Battery"],
+      brands: ["BOSCH", "VARTA", "MIDAC", "ENERGIZER", "ZENO"],
       features: [
-        "Alta durabilidade e confiança",
-        "Diferentes capacidades e polaridades",
-        "Medidas de CCA otimizadas",
-        "Reserva de capacidade superior",
+        "Tipo da bateria",
+        "Capacidade e polaridade",
+        "Medida de CCA",
+        "Reserva de capacidade",
+        "Tamanho adequado",
         "Garantia estendida"
-      ]
+      ],
+      detailedInfo: "Trabalhamos com marcas reconhecidas pela confiabilidade, oferecendo modelos ideais para diversas aplicações automotivas e industriais."
     },
     {
       id: "lubrificantes",
       title: "Lubrificantes e Óleos Industriais",
-      description: "Lubrificantes para motociclos, automóveis, veículos pesados e maquinarias.",
+      description: "Lubrificantes de alta performance para motores e sistemas mecânicos, com foco na redução de atrito, desgaste e aumento da durabilidade dos componentes.",
       image: "oleo.png",
-      brands: ["MOBIL", "NGOL", "e entre outras"],
+      brands: ["ENOC", "ADNOC", "SHELL", "TOTAL"],
       features: [
         "Lubrificantes para máquinas industriais",
-        "Óleos têxteis especializados",
-        "Massas lubrificantes",
-        "Lubrificantes para motores a gás",
-        "Lubrificantes de refrigeração",
-        "Lubrificantes para navios"
+        "Indústria têxtil",
+        "Veículos de alto desempenho",
+        "Sistemas de refrigeração",
+        "Navios e embarcações marítimas"
+      ],
+      categories: [
+        "Automotivo",
+        "Industrial", 
+        "Marítimo",
+        "Comercial"
       ]
     },
     {
       id: "epi",
       title: "Equipamentos de Proteção Individual (EPI)",
-      description: "Equipamentos de segurança certificados para empresas da construção civil, minas, fábricas e indústrias em geral.",
+      description: "Seguindo as normas internacionais de segurança, oferecemos EPIs adequados para cada função e garantimos proteção completa para ambientes industriais, construção civil e logística.",
       image: "uniforme.jpg",
       brands: ["Diversas marcas certificadas"],
       features: [
-        "Botas e calçados de segurança",
-        "Capacetes e protetores",
-        "Luvas especializadas",
-        "Óculos de proteção",
-        "Coletes refletivos",
-        "Fardamentos profissionais",
-        "Máscaras e protetores auriculares",
-        "Cinturões de segurança e mosquetões",
-        "EPI completo para Combate Ao Incêndio"
+        "Proteção da cabeça: capacete",
+        "Proteção ocular: óculos",
+        "Proteção auditiva: protetor auricular",
+        "Proteção respiratória: máscara",
+        "Proteção facial: face shield",
+        "Proteção do tronco: traje de segurança",
+        "Proteção de mãos e braços: luvas e braçadeiras",
+        "Proteção de pés e pernas: calçados e perneiras",
+        "Proteção contra quedas: cinturão de segurança e mosquetão"
       ]
     },
     {
@@ -227,6 +235,27 @@ const Products = () => {
                         </div>
                       )}
 
+                      {/* Categories for Lubrificantes */}
+                      {category.categories && (
+                        <div>
+                          <h4 className="font-montserrat font-semibold text-xl text-industrial-blue mb-4">
+                            Categorias Disponíveis
+                          </h4>
+                          <div className="grid grid-cols-2 gap-3">
+                            {category.categories.map((cat, catIndex) => (
+                              <div 
+                                key={catIndex}
+                                className="bg-industrial-orange-light border border-industrial-orange rounded-lg p-3 text-center"
+                              >
+                                <span className="font-roboto font-medium text-industrial-blue text-sm">
+                                  {cat}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
                       {/* Features */}
                       {category.features && category.features.length > 0 && (
                         <div>
@@ -243,6 +272,15 @@ const Products = () => {
                               </li>
                             ))}
                           </ul>
+                        </div>
+                      )}
+
+                      {/* Detailed Info */}
+                      {category.detailedInfo && (
+                        <div className="bg-industrial-gray-lighter p-4 rounded-lg border-l-4 border-industrial-orange">
+                          <p className="font-roboto text-gray-700 italic">
+                            {category.detailedInfo}
+                          </p>
                         </div>
                       )}
 
