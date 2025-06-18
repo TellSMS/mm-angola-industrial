@@ -107,7 +107,7 @@ const Footer = () => {
         <div className="border-t border-gray-300 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-700 font-roboto">
-              © 2025 MACHADO & MANSOUR. Todos os direitos reservados.
+              © 2025 M&M LDA. Todos os direitos reservados.
             </p>
             <p className="text-gray-700 font-roboto mt-2 md:mt-0">
               Site desenvolvido por <a href="https://petrohost.ao/" className="text-industrial-orange hover:text-[#15335E] hover:underline">Petrohost</a>
