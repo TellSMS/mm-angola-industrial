@@ -1,20 +1,13 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
       <section className="relative h-96 bg-gradient-to-r from-industrial-blue to-industrial-blue/90 flex items-center">
         <div className="absolute inset-0">
-          <img 
-            src="/sobre.jpg" 
-            alt="Sobre a M&M Lda" 
-            className="w-full h-full object-cover opacity-30"
-          />
+          <img src="/sobre.jpg" alt="Sobre a M&M Lda" className="w-full h-full object-cover opacity-30" />
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl">
@@ -61,11 +54,7 @@ const About = () => {
 
             {/* Image */}
             <div>
-              <img 
-                src="/sobre1.jpg" 
-                alt="Equipa M&M Lda" 
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
-              />
+              <img src="/sobre1.jpg" alt="Equipa M&M Lda" className="w-full h-96 object-cover rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -77,9 +66,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Mission */}
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-industrial-blue/10 rounded-lg flex items-center justify-center mb-6">
-                <div className="w-6 h-6 bg-industrial-blue rounded"></div>
-              </div>
+              
               <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4">
                 Missão
               </h3>
@@ -91,9 +78,7 @@ const About = () => {
 
             {/* Vision */}
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-industrial-orange/10 rounded-lg flex items-center justify-center mb-6">
-                <div className="w-6 h-6 bg-industrial-orange rounded"></div>
-              </div>
+              
               <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4">
                 Visão
               </h3>
@@ -105,9 +90,7 @@ const About = () => {
 
             {/* Values */}
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-green-600/10 rounded-lg flex items-center justify-center mb-6">
-                <div className="w-6 h-6 bg-green-600 rounded"></div>
-              </div>
+              
               <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4">
                 Valores
               </h3>
@@ -121,32 +104,9 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-industrial-blue mb-2">9+</div>
-              <div className="text-gray-600 font-roboto">Anos de Experiência</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-industrial-blue mb-2">500+</div>
-              <div className="text-gray-600 font-roboto">Clientes Satisfeitos</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-industrial-blue mb-2">8</div>
-              <div className="text-gray-600 font-roboto">Sectores Atendidos</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-industrial-blue mb-2">100%</div>
-              <div className="text-gray-600 font-roboto">Produtos de Qualidade</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
