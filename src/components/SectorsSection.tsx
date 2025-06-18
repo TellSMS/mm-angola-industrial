@@ -1,25 +1,21 @@
 
 import { 
-  Building, 
-  Pickaxe, 
-  Cog, 
   Truck, 
-  Zap, 
+  Cog, 
+  Pickaxe, 
+  Ship,
+  Plane,
   Wheat,
-  Ship
+  Building,
+  Building2
 } from 'lucide-react';
 
 const SectorsSection = () => {
   const sectors = [
     {
-      name: "Construção",
-      description: "Obras públicas e privadas",
-      icon: Building
-    },
-    {
-      name: "Mineração",
-      description: "Extração e processamento mineral",
-      icon: Pickaxe
+      name: "Transporte",
+      description: "Veículos ligeiros, pesados, motociclos, máquinas e equipamentos industriais",
+      icon: Truck
     },
     {
       name: "Indústria",
@@ -27,24 +23,34 @@ const SectorsSection = () => {
       icon: Cog
     },
     {
-      name: "Logística",
-      description: "Transporte e distribuição",
-      icon: Truck
+      name: "Mineração",
+      description: "Extracção e processamento mineral",
+      icon: Pickaxe
     },
     {
-      name: "Energia",
-      description: "Geração e distribuição energética",
-      icon: Zap
+      name: "Portos",
+      description: "Portos marítimos e fluviais",
+      icon: Ship
     },
     {
-      name: "Agricultura",
-      description: "Agronegócio e produção agrícola",
+      name: "Aeroportos",
+      description: "Infraestrutura aeroportuária",
+      icon: Plane
+    },
+    {
+      name: "Agro-negócio",
+      description: "Agro-negócio e produção agrícola",
       icon: Wheat
     },
     {
-      name: "Infraestrutura de Transportes",
-      description: "Portos marítimos e fluviais, ferrovias e aeroportos",
-      icon: Ship
+      name: "Construção",
+      description: "Obras públicas e privadas",
+      icon: Building
+    },
+    {
+      name: "Infraestrutura",
+      description: "Ferrovias e infraestruturas diversas",
+      icon: Building2
     }
   ];
 
@@ -53,11 +59,11 @@ const SectorsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
-            Setores que Servimos
+            Sectores que Servimos
           </h2>
           <div className="w-24 h-1 bg-industrial-orange mx-auto mb-6"></div>
           <p className="font-roboto text-lg text-gray-600 max-w-3xl mx-auto">
-            Atendemos diversos setores da economia angolana com soluções especializadas
+            Atendemos diversos sectores da economia angolana com soluções especializadas
           </p>
         </div>
 

@@ -84,7 +84,7 @@ const Products = () => {
     {
       id: "lubrificantes",
       title: "Lubrificantes e Óleos Industriais",
-      description: "Lubrificantes de alta performance para motores e sistemas mecânicos, com foco na redução de atrito, desgaste e aumento da durabilidade dos componentes.",
+      description: "Lubrificantes para veículos ligeiros e pesados, motociclos, máquinas, equipamentos industriais e navios.",
       image: "oleo.png",
       brands: ["ENOC", "ADNOC", "SHELL", "TOTAL", "Mobil", "NGOL"],
       features: [
@@ -103,20 +103,20 @@ const Products = () => {
     },
     {
       id: "epi",
-      title: "Equipamentos de Proteção Individual (EPI)",
-      description: "Seguindo as normas internacionais de segurança, oferecemos EPIs adequados para cada função e garantimos proteção completa para ambientes industriais, construção civil e logística.",
+      title: "Equipamentos de Protecção Individual (EPI)",
+      description: "Seguindo as normas internacionais de segurança, oferecemos EPIs adequados para cada função e garantimos protecção completa para ambientes industriais, construção civil e logística.",
       image: "uniforme.jpg",
       brands: ["Diversas marcas certificadas"],
       features: [
-        "Proteção da cabeça: capacete",
-        "Proteção ocular: óculos",
-        "Proteção auditiva: protetor auricular",
-        "Proteção respiratória: máscara",
-        "Proteção facial: face shield",
-        "Proteção do tronco: traje de segurança",
-        "Proteção de mãos e braços: luvas e braçadeiras",
-        "Proteção de pés e pernas: calçados e perneiras",
-        "Proteção contra quedas: cinturão de segurança e mosquetão"
+        "Protecção da cabeça: capacete",
+        "Protecção ocular: óculos",
+        "Protecção auditiva: protector auricular",
+        "Protecção respiratória: máscara",
+        "Protecção facial: face shield",
+        "Protecção do tronco: traje de segurança",
+        "Protecção de mãos e braços: luvas e braçadeiras",
+        "Protecção de pés e pernas: calçados e perneiras",
+        "Protecção contra quedas: cinturão de segurança e mosquetão"
       ]
     },
     {
@@ -127,7 +127,7 @@ const Products = () => {
       brands: ["Hengst Filter", "Mann-Filter", "Fleetguard", "Luber-finer"],
       features: [
         "Eficiência de filtração superior",
-        "Proteção completa de equipamentos",
+        "Protecção completa de equipamentos",
         "Variedade para todos os tipos",
         "Longa duração",
         "Fácil instalação"
@@ -136,13 +136,13 @@ const Products = () => {
     {
       id: "soldadura",
       title: "Material de Soldadura",
-      description: "Equipamentos completos para soldadura profissional, incluindo máquinas, eletrodos, máscaras, cabos e todos os consumíveis necessários.",
+      description: "Equipamentos completos para soldadura profissional, incluindo máquinas, eléctrodos, máscaras, cabos e todos os consumíveis necessários.",
       image: "sol.jpg",
       brands: ["Diversas marcas profissionais"],
       features: [
         "Máquinas de soldar profissionais",
-        "Eletrodos de alta qualidade",
-        "Máscaras de proteção",
+        "Eléctrodos de alta qualidade",
+        "Máscaras de protecção",
         "Cabos e reguladores",
         "Consumíveis diversos"
       ]
@@ -177,7 +177,7 @@ const Products = () => {
             </h1>
             <p className="font-roboto text-lg lg:text-xl text-gray-200">
               Descubra a nossa vasta gama de produtos industriais de alta qualidade, 
-              cuidadosamente selecionados para atender as necessidades do seu negócio
+              cuidadosamente seleccionados para atender as necessidades do seu negócio
             </p>
           </div>
         </div>
@@ -322,7 +322,7 @@ const Products = () => {
               asChild
             >
               <a
-                href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20personalizado%20através%20do%20site%20da%20Machado%20%26%20Mansour."
+                href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20personalizado%20através%20do%20site%20da%20M%26M%20Lda."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -337,7 +337,7 @@ const Products = () => {
               asChild
             >
               <a
-                href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20através%20do%20site%20da%20Machado%20%26%20Mansour."
+                href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20através%20do%20site%20da%20M%26M%20Lda."
                 target="_blank"
                 rel="noopener noreferrer"
               >

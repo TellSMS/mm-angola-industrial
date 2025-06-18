@@ -1,3 +1,4 @@
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FeaturedProductsSection from '@/components/FeaturedProductsSection';
@@ -133,14 +134,14 @@ const Index = () => {
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">Sobre Nós</h2>
             <div className="w-24 h-1 bg-industrial-orange mb-6"></div>
             <p className="font-roboto text-lg text-gray-700 mb-4">
-              A Machado & Mansour é referência em soluções industriais em Angola desde 2016. Oferecemos uma linha completa de produtos e serviços para diversos setores, sempre com qualidade, agilidade e atendimento especializado. Nossa missão é impulsionar a produtividade e a segurança das empresas angolanas, fornecendo marcas reconhecidas e suporte técnico de excelência.
+              A M&M Lda é referência em soluções industriais em Angola desde 2016. Oferecemos uma linha completa de produtos e serviços para diversos sectores, sempre com qualidade, agilidade e atendimento especializado. Nossa missão é impulsionar a produtividade e a segurança das empresas, fornecendo marcas reconhecidas e suporte técnico de excelência.
             </p>
             <Link to="/sobre" className="inline-block mt-2 text-industrial-orange font-semibold hover:underline font-roboto">
               Saiba mais sobre a nossa história
             </Link>
           </div>
           <div>
-            <img src="/sobre.jpg" alt="Sobre a Machado & Mansour" className="rounded-lg shadow-lg w-full h-auto" />
+            <img src="/sobre.jpg" alt="Sobre a M&M Lda" className="rounded-lg shadow-lg w-full h-auto" />
           </div>
         </div>
       </section>
@@ -162,7 +163,7 @@ const Index = () => {
               asChild
             >
               <a
-                href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20através%20do%20site%20da%20Machado%20%26%20Mansour."
+                href="https://wa.me/244946005595?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20através%20do%20site%20da%20M%26M%20Lda."
                 target="_blank"
                 rel="noopener noreferrer"
               >
