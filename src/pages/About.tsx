@@ -8,31 +8,22 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-industrial-blue via-industrial-blue to-blue-800">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content - Left Side */}
-            <div className="space-y-6 text-white">
-              <h1 className="font-montserrat font-bold text-4xl lg:text-5xl text-white mb-6">
-                Sobre a M&M Lda
-              </h1>
-              <p className="font-roboto text-lg lg:text-xl text-white/90 leading-relaxed">
-                Fornecedor líder de produtos industriais em Angola desde 2016, oferecendo soluções completas e de qualidade para diversos setores.
-              </p>
-            </div>
-
-            {/* Image - Right Side */}
-            <div className="relative">
-              <div className="relative z-10">
-                <img 
-                  src="/sobre.jpg" 
-                  alt="Sobre a M&M Lda" 
-                  className="w-full h-auto rounded-lg shadow-2xl"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-industrial-orange/20 to-white/10 rounded-lg transform translate-x-4 translate-y-4 -z-10"></div>
-            </div>
+      <section className="relative h-96 bg-gradient-to-r from-industrial-blue to-industrial-blue/90 flex items-center">
+        <div className="absolute inset-0">
+          <img 
+            src="/sobre.jpg" 
+            alt="Sobre a M&M Lda" 
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="max-w-3xl">
+            <h1 className="font-montserrat font-bold text-4xl lg:text-5xl text-white mb-6">
+              Sobre a M&M Lda
+            </h1>
+            <p className="font-roboto text-lg text-white/90 max-w-2xl">
+              Fornecedor líder de produtos industriais em Angola desde 2016
+            </p>
           </div>
         </div>
       </section>
@@ -43,10 +34,10 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div>
-              <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
+              <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-6">
                 A Nossa História
               </h2>
-              <div className="w-24 h-1 bg-industrial-orange mb-6"></div>
+              <div className="w-24 h-1 bg-industrial-orange mb-8"></div>
               
               <div className="space-y-6 text-gray-700 font-roboto text-lg leading-relaxed">
                 <p>
@@ -69,68 +60,58 @@ const About = () => {
             </div>
 
             {/* Image */}
-            <div className="relative">
-              <div className="relative z-10">
-                <img 
-                  src="/sobre1.jpg" 
-                  alt="Equipa M&M Lda" 
-                  className="w-full h-96 object-cover rounded-lg shadow-2xl"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-industrial-orange/20 to-white/10 rounded-lg transform translate-x-4 translate-y-4 -z-10"></div>
+            <div>
+              <img 
+                src="/sobre1.jpg" 
+                alt="Equipa M&M Lda" 
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
-              Missão, Visão e Valores
-            </h2>
-            <div className="w-24 h-1 bg-industrial-orange mx-auto mb-6"></div>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Mission */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
-              <div className="w-16 h-16 bg-industrial-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-industrial-blue rounded-full"></div>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-industrial-blue/10 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-6 h-6 bg-industrial-blue rounded"></div>
               </div>
-              <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4 text-center">
+              <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4">
                 Missão
               </h3>
-              <p className="text-gray-700 font-roboto text-center">
+              <p className="text-gray-700 font-roboto">
                 Fornecer produtos industriais de alta qualidade e soluções personalizadas 
                 para empresas, contribuindo para o desenvolvimento industrial de Angola.
               </p>
             </div>
 
             {/* Vision */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
-              <div className="w-16 h-16 bg-industrial-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-industrial-orange rounded-full"></div>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-industrial-orange/10 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-6 h-6 bg-industrial-orange rounded"></div>
               </div>
-              <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4 text-center">
+              <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4">
                 Visão
               </h3>
-              <p className="text-gray-700 font-roboto text-center">
+              <p className="text-gray-700 font-roboto">
                 Ser a empresa de referência no fornecimento de produtos industriais em Angola, 
                 reconhecida pela qualidade, inovação e excelência no atendimento.
               </p>
             </div>
 
             {/* Values */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
-              <div className="w-16 h-16 bg-green-600/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-green-600 rounded-full"></div>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-green-600/10 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-6 h-6 bg-green-600 rounded"></div>
               </div>
-              <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4 text-center">
+              <h3 className="font-montserrat font-bold text-xl text-industrial-blue mb-4">
                 Valores
               </h3>
-              <p className="text-gray-700 font-roboto text-center">
+              <p className="text-gray-700 font-roboto">
                 Integridade, qualidade, compromisso com o cliente, inovação contínua 
                 e responsabilidade social e ambiental.
               </p>
@@ -140,30 +121,23 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-industrial-blue mb-4">
-              Os Nossos Números
-            </h2>
-            <div className="w-24 h-1 bg-industrial-orange mx-auto mb-6"></div>
-          </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="group">
-              <div className="text-4xl lg:text-5xl font-bold text-industrial-blue mb-2 group-hover:text-industrial-orange transition-colors duration-200">9+</div>
+            <div>
+              <div className="text-4xl font-bold text-industrial-blue mb-2">9+</div>
               <div className="text-gray-600 font-roboto">Anos de Experiência</div>
             </div>
-            <div className="group">
-              <div className="text-4xl lg:text-5xl font-bold text-industrial-blue mb-2 group-hover:text-industrial-orange transition-colors duration-200">500+</div>
+            <div>
+              <div className="text-4xl font-bold text-industrial-blue mb-2">500+</div>
               <div className="text-gray-600 font-roboto">Clientes Satisfeitos</div>
             </div>
-            <div className="group">
-              <div className="text-4xl lg:text-5xl font-bold text-industrial-blue mb-2 group-hover:text-industrial-orange transition-colors duration-200">8</div>
+            <div>
+              <div className="text-4xl font-bold text-industrial-blue mb-2">8</div>
               <div className="text-gray-600 font-roboto">Sectores Atendidos</div>
             </div>
-            <div className="group">
-              <div className="text-4xl lg:text-5xl font-bold text-industrial-blue mb-2 group-hover:text-industrial-orange transition-colors duration-200">100%</div>
+            <div>
+              <div className="text-4xl font-bold text-industrial-blue mb-2">100%</div>
               <div className="text-gray-600 font-roboto">Produtos de Qualidade</div>
             </div>
           </div>
